@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React, { useImperativeHandle, useState } from 'react';
 import styles from './_.module.scss';
 
 type Props = {
     id: string;
     frontContent: string;
     backContent: React.ReactNode;
+    isPlayAll?: boolean;
     handleFlip: (id: string, isFlipped: boolean) => void;
   };
-const LetterCard = ({ id, frontContent, backContent, handleFlip }: Props) => {
+const LetterCard = ({ id, frontContent, backContent, isPlayAll = false, handleFlip }: Props, ref) => {
   const [isFlipped, setIsFlipped] = useState(false);
+
+  useImperativeHandle(ref, () => {
+    return {cardClick: () => handleCardClick()}
+  })
 
   const handleCardClick = () => {
     setIsFlipped(!isFlipped);
@@ -16,7 +21,7 @@ const LetterCard = ({ id, frontContent, backContent, handleFlip }: Props) => {
   };
 
   return (
-    <div className={styles.card + (isFlipped ? ' ' + styles.flipped : '')} onClick={handleCardClick}>
+    <div className={styles.card + (isFlipped ? ' ' + styles.flipped : '')} onClick={!isPlayAll ? handleCardClick : () => null}>
       <div className={styles.cardInner}>
         <div className={`${styles.cardFront} ${styles[frontContent]} `}>
         </div>
@@ -28,4 +33,4 @@ const LetterCard = ({ id, frontContent, backContent, handleFlip }: Props) => {
   );
 };
 
-export default LetterCard;
+export default React.forwardRef(LetterCard);

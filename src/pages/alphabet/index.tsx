@@ -1,6 +1,7 @@
 import styles from "./_.module.scss";
 import LetterCard from "components/letter-card";
 import { useState } from "react";
+import { useRef } from 'react'
 import Layout from "components/layout";
 import Head from "next/head";
 
@@ -42,6 +43,8 @@ const cards: CardData[] = [
 
 const Alphabet = () => {
   const [cardStates, setCardStates] = useState({});
+  const [isPlayAll, setIsPlayAll] = useState(false);
+  const refs = useRef<any>([]);
 
   const play = (letter: string) => {
     const audio = document.getElementById(letter) as HTMLMediaElement;
@@ -52,26 +55,44 @@ const Alphabet = () => {
     setCardStates((prevStates) => ({ ...prevStates, [id]: isFlipped }));
   };
 
+  const playAndFlip = (i: number) => {
+    refs.current[i].cardClick();
+    play(cards[i].id);
+    i == cards.length - 1 ? setIsPlayAll(false) : setIsPlayAll(true);
+  }
+
+  const playAll = () => {
+    setIsPlayAll(true);
+    for (let i = 0; i < cards.length; i++) {
+      setTimeout(function () {
+        playAndFlip(i)
+      }, i * 1200);
+    }
+  };
+
   return (
     <div className={styles.alphabet}>
       <Head>
         <title>Bảng chữ cái</title>
       </Head>
+      <button className={styles.playAll} onClick={(e) => !isPlayAll ? playAll() : () => null}>Play All</button>
       <div className={styles.container}>
-        {cards.map((card) => (
-          <div className={styles.letter} onClick={(e) => play(card.id)}>
+        {cards.map((card, index) => {
+          return <div className={styles.letter} onClick={(e) => !isPlayAll ? play(card.id) : () => null}>
             <LetterCard
               key={card.id}
+              ref={el => refs.current[index] = el}
               id={card.id}
               frontContent={card.frontContent}
               backContent={card.backContent}
+              isPlayAll = {isPlayAll}
               handleFlip={handleFlip}
             />
             <audio id={card.id}>
               <source src={"/audio/" + card.id + ".mp3"} type="audio/mpeg" />
             </audio>
           </div>
-        ))}
+        })}
       </div>
     </div>
   );
