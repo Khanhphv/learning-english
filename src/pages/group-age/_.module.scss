@@ -1,0 +1,110 @@
+.main {
+  position: relative;
+  perspective: 1000px;
+  width: 100%;
+  min-height: 100vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #eaeaea;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+  .header {
+    height: 80px;
+    width: 100%;
+    background-color: aqua;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 3px -2px 22px 2px rgba(105, 128, 122, 1);
+    div {
+      font-weight: bold;
+      position: absolute;
+      right: 10px;
+      bottom: 0;
+      margin: 12px;
+      border-bottom: 1px solid #875f5f;
+      padding: 4px;
+    }
+  }
+  a {
+    @media screen and (max-width: 450px) {
+      width: 20rem;
+    }
+    width: 15rem;
+    height: 160px;
+    color: black;
+    border-radius: 20px;
+    background-color: #fff9f9;
+    margin: 20px;
+    align-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 5px 3px 10px -1px rgba(87, 128, 116, 0.85);
+    .avatar {
+      border: 1px solid black;
+      width: 100%;
+      height: 50%;
+      border-radius: 15px;
+      position: relative;
+      //   background: url("../dailyroutin.jpg");
+      background-size: cover;
+    }
+    .topic {
+      display: flex;
+      justify-content: space-around;
+      .topicName {
+        text-align: start;
+        font-weight: bold;
+        flex: 4;
+      }
+      .index {
+        text-align: end;
+        font-weight: bold;
+        flex: 1;
+      }
+    }
+    .content {
+      padding: 2px;
+      margin-top: 5px;
+    }
+    p {
+      text-align: start;
+      overflow: hidden;
+      //text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      font-size: small;
+    }
+  }
+
+  #item:hover {
+    border: 2px solid skyblue;
+  }
+
+  .bottombuttons {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    margin-top: 20px;
+    .play {
+      border-radius: 5px;
+      padding: 2px 5px;
+      bottom: 0;
+      background: #cfe7fa;
+      width: 80%;
+      font-weight: bold;
+    }
+    & :hover {
+      -webkit-transform: scale(2);
+      -ms-ransform: scale(2);
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+  }
+}

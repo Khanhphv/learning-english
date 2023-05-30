@@ -2,6 +2,7 @@ import styles from "./_.module.scss";
 import Image from "next/image";
 import Layout from "components/layout";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
 type tocData = {
   id: number;
@@ -12,127 +13,65 @@ type tocData = {
 
 const tocs: tocData[] = [
   {
-    id: 1,
-    content: "Bảng chữ cái",
-    image: "/table-of-contents/abcd.png",
-    src: "/alphabet",
-  },
-  {
     id: 2,
-    content: "Chào hỏi",
+    content: "Lứa tuổi: 3",
     image: "/table-of-contents/hello.png",
-    src: "#",
+    src: "/group-age/age3",
   },
   {
     id: 3,
-    content: "100 từ thông dụng nhất",
+    content: "Lứa tuổi: 4",
     image: "/table-of-contents/one-hundred.png",
-    src: "#",
+    src: "/group-age/age4",
   },
   {
     id: 4,
-    content: "100 từ thông dụng nhất (2)",
+    content: "Lứa tuổi: 5",
     image: "/table-of-contents/one-hundred.png",
-    src: "#",
+    src: "/group-age/age5",
   },
   {
     id: 5,
-    content: "Học số đếm",
+    content: "Lứa tuổi: 6",
     image: "/table-of-contents/number-blocks.png",
-    src: "#",
+    src: "/group-age/age6",
   },
   {
     id: 6,
-    content: "Học ngày tháng, thứ",
+    content: "Lứa tuổi: 7",
     image: "/table-of-contents/schedule.png",
-    src: "#",
+    src: "/group-age/age7",
   },
   {
     id: 7,
-    content: "Học màu sắc, hình dạng",
+    content: "Lứa tuổi: 8",
     image: "/table-of-contents/color-palette.png",
-    src: "#",
+    src: "/group-age/age8",
   },
   {
     id: 8,
-    content: "Chủ đề gia đình",
+    content: "Lứa tuổi: 9",
     image: "/table-of-contents/family.png",
-    src: "#",
+    src: "/group-age/age9",
   },
   {
     id: 9,
-    content: "Chủ đề nhà cửa",
+    content: "Lứa tuổi: 10",
     image: "/table-of-contents/house.png",
-    src: "#",
+    src: "/group-age/age10",
   },
   {
     id: 10,
-    content: "Chủ đề trường học",
+    content: "Lứa tuổi: 11",
     image: "/table-of-contents/school.png",
-    src: "#",
+    src: "/group-age/age11",
   },
   {
     id: 11,
-    content: "Chủ đề giáo dục",
+    content: "Lứa tuổi: 12",
     image: "/table-of-contents/presentation.png",
-    src: "#",
+    src: "/group-age/age12",
   },
-  {
-    id: 12,
-    content: "Chủ đề môi trường",
-    image: "/table-of-contents/save-the-planet.png",
-    src: "#",
-  },
-  {
-    id: 13,
-    content: "Chủ đề giao thông, đi lại",
-    image: "/table-of-contents/traffic.png",
-    src: "#",
-  },
-  {
-    id: 14,
-    content: "Chủ đề giải trí",
-    image: "/table-of-contents/smartphone.png",
-    src: "#",
-  },
-  {
-    id: 15,
-    content: "Chủ đề văn hoá",
-    image: "/table-of-contents/carrying.png",
-    src: "#",
-  },
-  {
-    id: 16,
-    content: "Chủ đề mua sắm",
-    image: "/table-of-contents/online-shop.png",
-    src: "#",
-  },
-  {
-    id: 17,
-    content: "Chủ đề công nghệ",
-    image: "/table-of-contents/innovation.png",
-    src: "#",
-  },
-  {
-    id: 18,
-    content: "Chủ đề sức khoẻ",
-    image: "/table-of-contents/healthcare.png",
-    src: "#",
-  },
-  {
-    id: 19,
-    content: "Phụ lục 1",
-    image: "/table-of-contents/attached-file.png",
-    src: "#",
-  },
-  {
-    id: 20,
-    content: "Phụ lục 2",
-    image: "/table-of-contents/attached-file.png",
-    src: "#",
-  },
-
-  // Add as many cards as you need
 ];
 
 const TableOfContents = () => {
@@ -142,7 +81,7 @@ const TableOfContents = () => {
         <title>Mục lục</title>
       </Head>
       <div id={styles.tocContainer} className={styles.noBullets}>
-        <p className={styles.tocTitle}>Mục lục</p>
+        <p className={styles.tocTitle}>Học theo lứa tuổi</p>
         <ul className={styles.tocList}>
           {tocs.map((tocs, index) => (
             <li key={`toc_${index}`}>
