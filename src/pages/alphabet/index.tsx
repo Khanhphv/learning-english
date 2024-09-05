@@ -59,7 +59,11 @@ const Alphabet = () => {
       </Head>
       <div className={styles.container}>
         {cards.map((card) => (
-          <div className={styles.letter} onClick={(e) => play(card.id)}>
+          <div
+            key={card.id}
+            className={styles.letter}
+            onClick={(e) => play(card.id)}
+          >
             <LetterCard
               key={card.id}
               id={card.id}
@@ -76,5 +80,5 @@ const Alphabet = () => {
     </div>
   );
 };
-Alphabet.getLayout = Layout
+Alphabet.getLayout = Layout;
 export default Alphabet;

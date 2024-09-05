@@ -4,11 +4,13 @@
 
 html,
 body {
-  overflow-x: hidden;
-  touch-action: none;
-  -ms-touch-action: none;
+  /* overflow-x: hidden; */
+  /* touch-action: none; */
+  /* -ms-touch-action: none; */
   display: flex;
   min-height: 100vh;
+  overflow-y: scroll;
+  height: 100%;
 }
 body > div {
   height: 100vh;

@@ -64,5 +64,5 @@ const HowToLearn = () => {
     </div>
   );
 };
-// HowToLearn.getLayout = Layout;
+HowToLearn.getLayout = Layout;
 export default HowToLearn;

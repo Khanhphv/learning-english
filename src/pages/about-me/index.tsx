@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
 import styles from "./_.module.scss";
 import Head from "next/head";
+import Layout from "components/layout";
 // Little helpers ...
 const url = (name: string, wrap = false) =>
   `${
@@ -240,3 +241,5 @@ export default function AboutMe() {
     </>
   );
 }
+
+// AboutMe.getLayout = Layout;
