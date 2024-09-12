@@ -98,7 +98,7 @@ const Menu = forwardRef(() => {
           </div>
           <p>Cách học</p>
         </div>
-        <div className={styles.menuCard} onClick={() => movePage("/table-of-contents")}>
+        <div className={styles.menuCard} onClick={() => movePage("/table-age")}>
         <div className={styles.menuCardPhoto}>
               <div className={styles.menuCardPhotoBgc}></div>
               <div className={styles.menuCardPhotoInside}></div>

@@ -19,7 +19,7 @@ const ListeningComponent = () => {
   const age = index ? String(index[0]) : null;
   const id = index ? Number(index[1]) : 0;
 
-  const fetcher = async (url: any) => {
+  const fetcher = async (url: string) => {
     const res = await fetch(url);
 
     if (!res.ok) {
