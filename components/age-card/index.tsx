@@ -9,18 +9,21 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Layout from "components/layout";
+import { useRouter } from "next/router";
 const AgeCardView = () => {
+  const router = useRouter();
+
   const ageCards = [
-    { id: 1, image: "../age-images/age3.png" },
-    { id: 2, image: "../age-images/age4.png" },
-    { id: 3, image: "../age-images/age5.png" },
-    { id: 4, image: "../age-images/age6.png" },
-    { id: 5, image: "../age-images/age7.png" },
-    { id: 6, image: "../age-images/age8.png" },
-    { id: 7, image: "../age-images/age9.png" },
-    { id: 8, image: "../age-images/age10.png" },
-    { id: 9, image: "../age-images/age11.png" },
-    { id: 10, image: "../age-images/age12.png" },
+    { id: "age3", image: "../age-images/age3.png" },
+    { id: "age4", image: "../age-images/age4.png" },
+    { id: "age5", image: "../age-images/age5.png" },
+    { id: "age6", image: "../age-images/age6.png" },
+    { id: "age7", image: "../age-images/age7.png" },
+    { id: "age8", image: "../age-images/age8.png" },
+    { id: "age9", image: "../age-images/age9.png" },
+    { id: "age10", image: "../age-images/age10.png" },
+    { id: "age11", image: "../age-images/age11.png" },
+    { id: "age12", image: "../age-images/age12.png" },
   ];
 
   return (
@@ -47,7 +50,7 @@ const AgeCardView = () => {
             <div>
               <div className="relative flex items-center justify-center">
                 <img className="rounded-2xl mb-4" src={ageCard.image} alt="" />
-                <button className="">Learn</button>
+                <button onClick={() => router.push(`learning-content/${ageCard.id}`)}>Learn</button>
               </div>
             </div>
           </SwiperSlide>

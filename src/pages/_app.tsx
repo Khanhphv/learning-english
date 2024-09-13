@@ -6,7 +6,7 @@ import { fetcher } from "api-client/swrConfig";
 export default function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
   return (
-    <>
+    
       <SWRConfig value={{fetcher: fetcher, shouldRetryOnError:false}}>
         <Head>
           <meta
@@ -21,6 +21,6 @@ export default function MyApp({ Component, pageProps }) {
         </Head>
         {getLayout(<Component {...pageProps} />)}
       </SWRConfig>
-    </>
+    
   );
 }

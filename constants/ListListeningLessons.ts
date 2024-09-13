@@ -129,3 +129,16 @@ export const Ranges = {
     10: "A916:I929",
   },
 };
+
+export const RangesTopicsAndNewsWords = {
+  age3: "B16:C25",
+  age4: "B30:C138",
+  age5: "B140:C234",
+  age6: "B236:C332",
+  age7: "B334:C440",
+  age8: "B442:C532",
+  age9: "B534:C638",
+  age10: "B640:C737",
+  age11: "B739:C835",
+  age12: "B837:C929",
+};

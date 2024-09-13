@@ -13,9 +13,13 @@ const axiosClient = axios.create({
 
 
 axiosClient.interceptors.response.use(
-  (response) => response,
+  (response) => {
+    
+    return response;
+  },
+  
   (error) => {
-    // Xử lý lỗi
+    // Xử lý lỗi   
     return Promise.reject(error);
   }
 );

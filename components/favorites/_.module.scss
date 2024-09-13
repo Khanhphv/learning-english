@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One&display=swap");
+
+.heart-container{
+    background-color: #9077F5;
+    font-family: "Fredoka One", cursive;
+    color: white;
+    font-size: 30px;
+    border-radius: 30px;
+
+    img{
+        width: 50%;
+        height: auto;
+    }
+
+    h1{
+        margin: 1em 0em 1em 3em;
+    }
+
+    h3{
+        margin: 1em 4.5em;
+        font-size: 20px;   
+    }
+    button{
+        font-size: 30px;
+        color: #9077F5;
+        background-color: white;
+        margin: 1.5em 3em;
+        padding: 0.5em 2em;
+        border-radius: 35px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: 0.2s ease ;
+
+        &:hover{
+            transform: translateY(-10px);
+        }
+    }
+
+    svg{
+        position: absolute;
+    }
+}
+
