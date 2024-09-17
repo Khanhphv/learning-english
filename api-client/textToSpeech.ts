@@ -1,4 +1,4 @@
-import { url } from 'inspector';
+
 import useSWR from 'swr';
 import axiosClientForGoogleCloud from './axiosClientForGoogleCloud';
 
@@ -28,6 +28,7 @@ const TextToSpeechFetcher = async (url: string, params: TextToSpeechRequest) => 
 export const useTextToSpeech = (params: TextToSpeechRequest) => {
     const {data, error, mutate} = useSWR(params ? ['/text:synthesize', params] : null, ([url, params]) => TextToSpeechFetcher(url, params), {
         revalidateOnFocus: false,
+        dedupingInterval:60* 10 * 1000,
     });
     console.log(data);
     return{

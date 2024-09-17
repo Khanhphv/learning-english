@@ -19,7 +19,7 @@ axiosClientForGoogleCloud.interceptors.response.use(
   },
   
   (error) => {
-    // Xử lý lỗi   
+
     return Promise.reject(error);
   }
 );

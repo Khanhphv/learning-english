@@ -5,8 +5,8 @@ import { TextToSpeechRequest, useTextToSpeech } from "api-client/textToSpeech";
 
 const Dialogue = ({ dialogue, audioSrc }: any) => {
   const [showDialogue, setShowDialogue] = useState(true);
-  const [current, setCurrent] = useState(0);
   const [selectedText, setSelectedText] = useState<string>("");
+  const [currentAudio, setCurrentAudio] = useState<number>(0); 
 
   const params: TextToSpeechRequest = {
     input: {
@@ -32,33 +32,47 @@ const Dialogue = ({ dialogue, audioSrc }: any) => {
     );
   }
 
-  const { audioContent, isLoading, error } = useTextToSpeech(params || {});
+  const { audioContent, isLoading, error, mutate } = useTextToSpeech(params || {});
   const audioUrl = audioContent ? `data:audio/mp3;base64,${audioContent}` : "";
 
   const englishDialogue = dialogue[0];
   const allAudio = dialogue[1];
   const vietnameseDialogue = dialogue[2];
 
+  console.log(englishDialogue);
+
+
   const handleShowDialog = () => {
     setShowDialogue(!showDialogue);
   };
 
-  const handleSelect = (text: string, index: number) => {
+  const handleSelect = (text: string, index:number) => {
     const colonIndex = text.indexOf(":");
     const textAudio = colonIndex !== -1 ? text.slice(colonIndex + 1) : text;
-    
-
+    setCurrentAudio(index);
     setSelectedText(textAudio);
-    setCurrent(index);
+    
   };
+
+
+  const handleAudioEnd = () => {
+    if(currentAudio < englishDialogue.length - 1){
+      const nextDialog = englishDialogue[currentAudio + 1];
+      handleSelect(nextDialog, currentAudio + 1);
+    }else{
+      handleSelect(englishDialogue[0], 0);
+    }
+  }
+
   return (
     <>
       <AudioOperation
         english={englishDialogue}
         audio={allAudio}
         vietnamese={vietnameseDialogue}
-        index={current}
         audioSrc={audioUrl}
+        index={currentAudio}
+        onAudioEnd = {handleAudioEnd}
       ></AudioOperation>
       <div className={styles.dialogue}>
         <div className={styles.showDialog}>
@@ -68,7 +82,7 @@ const Dialogue = ({ dialogue, audioSrc }: any) => {
           <div className={styles.list}>
             {englishDialogue.map((eng: string, index: number) => (
               <button
-                onClick={() => handleSelect(eng, index)}
+                onClick={() => handleSelect(eng,index)}
                 key={eng}
                 className={styles.borderBottom}
               >

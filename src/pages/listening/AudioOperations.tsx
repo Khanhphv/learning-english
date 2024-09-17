@@ -1,11 +1,10 @@
 import { useState } from "react";
 import styles from "./_.module.scss";
 
-const Operations = ({ english, audio, vietnamese, index, audioSrc }: any) => {
+const Operations = ({ english, audio, vietnamese, audioSrc, onAudioEnd, index }: any) => {
   const [showSubtitle, setShowSubtitle] = useState(true);
   const [isLoop, setIsLoop] = useState(false);
-  const [current, setCurrent] = useState(index);
-  const [prevIndex, setPrevIndex] = useState(index);
+
 
   if (!audio) {
     return (
@@ -15,19 +14,9 @@ const Operations = ({ english, audio, vietnamese, index, audioSrc }: any) => {
     );
   }
 
-  // const audioSource = audioSrc + audio[current];
-  const length = english.length;
-  console.log(audio)
-  if (prevIndex !== index) {
-    setCurrent(index);
-    setPrevIndex(index);
-  }
 
-  const handleSwitch = () => {
-    if (current < length - 1) {
-      setCurrent(current + 1);
-    }
-  };
+
+  
 
   return (
     <>
@@ -37,9 +26,9 @@ const Operations = ({ english, audio, vietnamese, index, audioSrc }: any) => {
           <audio
             key={audioSrc}
             loop={isLoop}
-            autoPlay
             controls
-            onEnded={handleSwitch}
+            autoPlay
+            onEnded={onAudioEnd}
           >
             <source src={audioSrc} type="audio/mp3" />
             Your browser does not support the audio element.
@@ -67,8 +56,8 @@ const Operations = ({ english, audio, vietnamese, index, audioSrc }: any) => {
         <div style={{ paddingTop: "5px" }}>
           {showSubtitle && (
             <span>
-              {english[current]} <br />{" "}
-              <span style={{ color: "#a07d7d" }}>{vietnamese[current]}</span>
+              {english[index]} <br />{" "}
+              <span style={{ color: "#a07d7d" }}>{vietnamese[index]}</span>
             </span>
           )}
         </div>
