@@ -15,9 +15,9 @@ const Operations = ({ english, audio, vietnamese, index, audioSrc }: any) => {
     );
   }
 
-  const audioSource = audioSrc + audio[current];
+  // const audioSource = audioSrc + audio[current];
   const length = english.length;
-
+  console.log(audio)
   if (prevIndex !== index) {
     setCurrent(index);
     setPrevIndex(index);
@@ -35,13 +35,13 @@ const Operations = ({ english, audio, vietnamese, index, audioSrc }: any) => {
         <span> Ấn vào chi tiết đoạn hội thoại để nghe theo đoạn</span>
         <div>
           <audio
-            key={audioSource}
+            key={audioSrc}
             loop={isLoop}
             autoPlay
             controls
             onEnded={handleSwitch}
           >
-            <source src={audioSource} type="audio/mp4" />
+            <source src={audioSrc} type="audio/mp3" />
             Your browser does not support the audio element.
           </audio>
         </div>

@@ -1,15 +1,30 @@
+import { useRouter } from "next/router";
 import React from "react";
 import styles from "./_.module.scss";
-const LearnWords = () => {
+
+export interface LearnWordsProps {
+  newWord: number;
+
+}
+
+const LearnWords = ({newWord}: LearnWordsProps) => {
+  const router = useRouter();
+  const age = router.query.index ? String(router.query.index) : null;
+
+  const handleButtonStart = () => {
+    router.push(`/group-age/${age}`);
+  };
+
+
   return (
     <div className={styles["learn-word-container"]}>
-      <div className="grid grid-cols-2 grid-rows-2">
+      <div className="grid grid-cols-2 grid-rows-2 h-full w-full">
         <div className="col-span-1">
           <h1>Learn Words</h1>
-          <h3>Words</h3>
+          <h3>{newWord} - Words</h3>
         </div>
-        <div className="row-start-2 col-span-1">
-          <button>Start</button>
+        <div className="row-start-2 col-span-1 flex items-center">
+          <button onClick={handleButtonStart}>Start</button>
         </div>
         <div className="relative flex items-end justify-center row-span-2 col-start-2">
           <img src="/learning-content/book-vocabulary.png" alt="Book Image" />

@@ -50,6 +50,7 @@ const ListeningComponent = () => {
     // first is english dialog, second is audio file, the last is vietnamese dialog
     dialogue.current = [data[4], data[6], data[7]];
     newWordsVietnamese.current = data[8].toString().split(",");
+    console.log(dialogue);
   }
 
   if (error || !age || !id) {
