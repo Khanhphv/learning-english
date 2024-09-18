@@ -155,3 +155,9 @@ export const RangesHeart = {
   age11: "B81:E90",
   age12: "B91:E101",
 }
+
+
+export const GENDER_NAMES = {
+  maleNames: ["John", "A", "Person 1", "Samantha", "Student", "Tourist", "Tom"],
+  femaleNames: ["Sarah", "B", "Person 2", "Mary", "Teacher", "Guide" ],
+}

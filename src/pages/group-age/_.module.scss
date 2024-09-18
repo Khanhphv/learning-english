@@ -1,3 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One&display=swap");
+
+
+
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.3;
+}
+
+
 .main {
   position: relative;
   perspective: 1000px;
@@ -7,6 +22,7 @@
   right: 0;
   bottom: 0;
   top: 0;
+  padding-top: 4em;
   background-color: #eaeaea;
   display: flex;
   flex-wrap: wrap;
@@ -31,40 +47,44 @@
     }
   }
   .a {
+    
     @media screen and (max-width: 450px) {
       width: 20rem;
     }
+    
     width: 20rem;
     height: 160px;
-    color: black;
+    
     border-radius: 20px;
     background-color: #fff9f9;
     margin: 20px;
     align-content: center;
     box-sizing: border-box;
+    font-family: "Fredoka One", cursive;
     padding: 20px;
     text-align: center;
-    box-shadow: 5px 3px 10px -1px rgba(87, 128, 116, 0.85);
-    .avatar {
-      border: 1px solid black;
-      width: 100%;
-      height: 50%;
-      border-radius: 15px;
-      position: relative;
-      //   background: url("../dailyroutin.jpg");
-      background-size: cover;
-    }
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    // .avatar {
+    //   border: 1px solid black;
+    //   width: 100%;
+    //   height: 50%;
+    //   border-radius: 15px;
+    //   position: relative;
+    //     // background: url("../dailyroutin.jpg");
+    //   background-size: cover;
+    // }
     .topic {
+      
       display: flex;
       justify-content: space-around;
       .topicName {
+        font-size: 18px;
         text-align: start;
-        font-weight: bold;
         flex: 4;
       }
       .index {
         text-align: end;
-        font-weight: bold;
+        
         flex: 1;
       }
     }
@@ -83,9 +103,9 @@
     }
   }
 
-  #item:hover {
-    border: 2px solid skyblue;
-  }
+  // #item:hover {
+  //   border: 2px solid skyblue;
+  // }
 
   .bottombuttons {
     display: flex;
@@ -98,7 +118,7 @@
       bottom: 0;
       background: #cfe7fa;
       width: 80%;
-      font-weight: bold;
+      
     }
     & :hover {
       -webkit-transform: scale(2);

@@ -20,6 +20,6 @@ const ListeningContent = () => {
   )
 }
 
-ListeningContent.getLayout = Layout;
+ListeningContent.getLayout = (page: JSX.Element) => <Layout>{page}</Layout>;
 
 export default ListeningContent

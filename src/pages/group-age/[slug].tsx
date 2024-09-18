@@ -5,6 +5,8 @@ import Head from "next/head";
 import styles from "./_.module.scss";
 import { GOOGLE_API_KEY, GOOGLE_API_PRE, COLUMNS } from "constants/googleapi";
 import useSWR from "swr";
+import { useSpring, animated, config } from "@react-spring/web";
+
 const ranges = {
   age3: "heart!B1:E10",
   age4: "heart!B11:E20",
@@ -69,6 +71,20 @@ const ListeningExercise = () => {
   const router = useRouter();
   const { slug } = router.query;
   const id = slug ? String(slug) : null;
+  const background = useSpring({
+    from: {
+      background: "#ff615d",
+     
+    },
+    to: [
+      { background: "#bad5ea"},
+      { background: "#fd8769"},
+      { background: "#356d94"},
+      { background: "#ffdcb3"},
+    ],
+    config: config.molasses,
+    loop: { reverse: true },
+  });
 
   const fetcher = async (url: any) => {
     const res = await fetch(url);
@@ -109,12 +125,12 @@ const ListeningExercise = () => {
         <title>Listening</title>
       </Head>
 
-      <header className={styles.header}>
+      {/* <header className={styles.header}>
         <div>
           <span>Lứa tuổi : </span>
           {id?.substring(3)}
         </div>
-      </header>
+      </header> */}
       {ageGroup.current.map((exercise, index) => (
         <ListeningItem
           key={exercise}
@@ -125,6 +141,11 @@ const ListeningExercise = () => {
           isHearted={hearts.current ? hearts.current[index] : "0"}
         />
       ))}
+
+      <animated.div
+        style={background}
+        className={styles.background}
+      ></animated.div>
     </div>
   );
 };
