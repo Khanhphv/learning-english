@@ -12,7 +12,7 @@ const FavoriteCardComponent = ({ topic, newWord }: FavoriteComponentProps) => {
   const age = router.query.index ? String(router.query.index) : null;
 
   const handleButtonStart = () => {
-    router.push(`/group-age/${age}`);
+    router.push(`/love`);
   };
 
   return (

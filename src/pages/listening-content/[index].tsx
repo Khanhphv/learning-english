@@ -7,19 +7,18 @@ import useSWR from 'swr'
 
 
 const ListeningContent = () => {
-    const router = useRouter();
-    const index = router.query.index ? String(router.query.index) : null;
+   
     // const {data, error} = useSWR(`basic!${}`)    
 
 
   return (
-    <div>
+    <div className='container mx-auto py-32 px-16'>
         <CardComponent/>
 
     </div>
   )
 }
 
-ListeningContent.getLayout = (page: JSX.Element) => <Layout>{page}</Layout>;
+ListeningContent.getLayout = Layout;
 
 export default ListeningContent

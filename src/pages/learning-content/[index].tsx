@@ -93,10 +93,14 @@ const LearningContent = () => {
                   <Skeleton height={305} borderRadius={30} />
                 )}
               </div>
-              <div className="sm:row-start-2 flex justify-center items-center">
+              {
+                age && age !== 'age3' ? <div className="sm:row-start-2 flex justify-center items-center">
                 <LearnWords newWord={newWords.current} />
               </div>
-              <div className="sm:row-start-2 sm:col-start-2 flex justify-center items-center">
+              : null
+              }
+              
+              <div className={  `sm:row-start-2  flex justify-center items-center ${age && age !== 'age3' ? "sm:col-span-1" : "sm:col-span-2"}`}>
                 <FavoriteCardComponent
                   topic={totalHeartTopic.current}
                   newWord={totalHeartWords.current}
