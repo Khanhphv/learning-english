@@ -15,7 +15,7 @@ import FavoriteCardComponent from "components/favorites";
 import styles from "./_.module.scss";
 import { useSpringRef, useSpring, animated } from "@react-spring/web";
 import MovingBackground from "components/background";
-
+import {toast} from "sonner";
 const LearningContent = () => {
   const transRef = useSpringRef();
   const style = useSpring({
@@ -35,33 +35,34 @@ const LearningContent = () => {
   const age = index ? String(index) : null;
   const totalHeartWords = useRef<number>(0);
   const totalHeartTopic = useRef<number>(0);
-  const { data: data, error: error } = useSWR(
-    age && `basic!${RangesTopicsAndNewsWords[age]}${COLUMNS}`,
+  const { data: data_vocabulary, error: error_vocabulary } = useSWR(`/vocabulary/count/${age}`,
     { revalidateOnMount: true, revalidateOnFocus: false }
   );
 
-  const { data: data_heart, error: error_heart } = useSWR(
-    age && `heart!${RangesHeart[age]}`,
+  const { data: data_topic, error: error_topic } = useSWR(`/topic/count/${age}`,
     { revalidateOnMount: true, revalidateOnFocus: false }
   );
-  if (data_heart) {
-    const filterData = data_heart.filter((row: any) => row[3] === "1");
-    totalHeartTopic.current = filterData.length;
-    totalHeartWords.current = filterData.reduce((acc: number, item: any) => {
-      return acc + item[1].split(",").length;
-    }, 0);
-    console.log(totalHeartWords.current, totalHeartTopic.current);
+
+  // const { data: data_heart, error: error_heart } = useSWR(
+  //   age && `heart!${RangesHeart[age]}`,
+  //   { revalidateOnMount: true, revalidateOnFocus: false }
+  // );
+  // if (data_heart) {
+  //   const filterData = data_heart.filter((row: any) => row[3] === "1");
+  //   totalHeartTopic.current = filterData.length;
+  //   totalHeartWords.current = filterData.reduce((acc: number, item: any) => {
+  //     return acc + item[1].split(",").length;
+  //   }, 0);
+  //   console.log(totalHeartWords.current, totalHeartTopic.current);
+  // }
+
+  if (data_topic && data_vocabulary) {
+    topic.current = data_topic.result;
+    newWords.current = data_vocabulary.result;
   }
 
-  if (data) {
-    topic.current = data[0].length;
-    newWords.current = data[1].reduce((acc: number, item: any) => {
-      return acc + item.split(",").length;
-    }, 0);
-  }
-
-  if (error) {
-    return <div>Error loading data</div>;
+  if (error_topic  || error_vocabulary) {
+    toast.error("Error went load data");
   }
 
   return (
@@ -84,7 +85,7 @@ const LearningContent = () => {
           >
             <div className="grid grid-rows-3 sm:grid-cols-2 sm:grid-rows-2 gap-4 h-full w-full ">
               <div className="sm:col-span-2 flex items-center justify-center">
-                {data ? (
+                {data_topic && data_vocabulary ? (
                   <ListeningCardComponent
                     topic={topic.current}
                     newWord={newWords.current}
@@ -93,14 +94,14 @@ const LearningContent = () => {
                   <Skeleton height={305} borderRadius={30} />
                 )}
               </div>
-              {
-                age && age !== 'age3' ? <div className="sm:row-start-2 flex justify-center items-center">
+              
+                <div className="sm:row-start-2 flex justify-center items-center">
                 <LearnWords newWord={newWords.current} />
               </div>
-              : null
-              }
               
-              <div className={  `sm:row-start-2  flex justify-center items-center ${age && age !== 'age3' ? "sm:col-span-1" : "sm:col-span-2"}`}>
+              
+              
+              <div className= "sm:row-start-2  flex justify-center items-center">
                 <FavoriteCardComponent
                   topic={totalHeartTopic.current}
                   newWord={totalHeartWords.current}

@@ -2,12 +2,9 @@ package org.example.backend.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.example.backend.dto.response.ApiResponse;
+import org.example.backend.dto.ApiResponse;
 import org.example.backend.service.VocabularyService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
@@ -26,5 +23,12 @@ public class VocabularyController {
         }
 
         return ApiResponse.builder().build();
+    }
+
+    @GetMapping("/count/{age-group-id}")
+    public ApiResponse<Long> countVocabularyByAgeGroupId(@PathVariable("age-group-id") String ageGroupId){
+        return ApiResponse.<Long>builder()
+                .result(vocabularyService.countVocabularyByAgeGroupId(ageGroupId))
+                .build();
     }
 }

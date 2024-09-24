@@ -1,4 +1,4 @@
-package org.example.backend.dto.response;
+package org.example.backend.dto;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;

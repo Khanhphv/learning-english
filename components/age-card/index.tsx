@@ -1,5 +1,5 @@
 import AgeCard from "components/age-card";
-import * as React from "react";
+import  React, { useRef } from "react";
 import styles from "./_.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -10,22 +10,32 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Layout from "components/layout";
 import { useRouter } from "next/router";
+import useSwr from "swr";
+import { toast } from "sonner";
+import { type } from "os";
 const AgeCardView = () => {
+  type AgeGroup = {
+    id: string;
+    name: string;
+    image: string;
+  };
+
   const router = useRouter();
+  const ageGroups = useRef<AgeGroup[]>([]);
+  const { data, error, isLoading } = useSwr("/age-group", {
+    revalidateOnMount: true,
+  });
 
-  const ageCards = [
-    { id: "age3", image: "../age-images/age3.png" },
-    { id: "age4", image: "../age-images/age4.png" },
-    { id: "age5", image: "../age-images/age5.png" },
-    { id: "age6", image: "../age-images/age6.png" },
-    { id: "age7", image: "../age-images/age7.png" },
-    { id: "age8", image: "../age-images/age8.png" },
-    { id: "age9", image: "../age-images/age9.png" },
-    { id: "age10", image: "../age-images/age10.png" },
-    { id: "age11", image: "../age-images/age11.png" },
-    { id: "age12", image: "../age-images/age12.png" },
-  ];
+  if (error) {
+    toast.error(error.message);
+  }
 
+  if (data && data.result) {
+    ageGroups.current = data.result;
+  }
+
+
+  
   return (
     <div
       className={`${styles.listAgeContainer} container mx-auto px-14  text-center`}
@@ -45,12 +55,16 @@ const AgeCardView = () => {
           1024: { slidesPerView: 3 },
         }}
       >
-        {ageCards.map((ageCard) => (
+        {ageGroups.current.map((ageCard: AgeGroup) => (
           <SwiperSlide key={ageCard.id} className={styles.slide}>
             <div>
               <div className="relative flex items-center justify-center">
                 <img className="rounded-2xl mb-4" src={ageCard.image} alt="" />
-                <button onClick={() => router.push(`learning-content/${ageCard.id}`)}>Learn</button>
+                <button
+                  onClick={() => router.push(`learning-content/${ageCard.id}`)}
+                >
+                  Learn
+                </button>
               </div>
             </div>
           </SwiperSlide>

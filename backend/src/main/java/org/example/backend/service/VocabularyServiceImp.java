@@ -59,5 +59,12 @@ public class VocabularyServiceImp implements VocabularyService{
         workbook.close();
     }
 
+    @Override
+    public long countVocabularyByAgeGroupId(String ageGroupId) {
+        List<String> topicIds = topicRepository.findByAgeGroupId(ageGroupId).stream()
+                .map(Topic::getId)
+                .toList();
 
+        return vocabularyRepository.countByTopicIds(topicIds);
+    }
 }

@@ -4,9 +4,13 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.example.backend.dto.response.TopicResponse;
 import org.example.backend.entity.AgeGroup;
 import org.example.backend.entity.Topic;
 import org.example.backend.entity.Vocabulary;
+import org.example.backend.exception.ApplicationException;
+import org.example.backend.exception.ErrorCode;
+import org.example.backend.mapper.TopicMapper;
 import org.example.backend.repository.AgeGroupRepository;
 import org.example.backend.repository.TopicRepository;
 import org.example.backend.repository.VocabularyRepository;
@@ -26,6 +30,7 @@ import static org.example.backend.utils.ExcelUtil.isRowEmpty;
 @RequiredArgsConstructor
 @Slf4j
 public class TopicServiceImp implements TopicService {
+    private final TopicMapper topicMapper;
 
     private final TopicRepository topicRepository;
     private final AgeGroupRepository ageGroupRepository;
@@ -123,10 +128,12 @@ public class TopicServiceImp implements TopicService {
             }
             String title = getCellValue(row.getCell(1));
             String ageGroupName = getCellValue(row.getCell(0));
+            boolean isFavourite = Boolean.parseBoolean(getCellValue(row.getCell(3)));
             AgeGroup ageGroup = ageGroupRepository.findByName(ageGroupName);
             Topic topic = Topic.builder()
                     .title(title)
                     .ageGroupId(ageGroup.getId())
+                    .favourite(isFavourite)
                     .build();
             topics.add(topic);
         }
@@ -134,6 +141,32 @@ public class TopicServiceImp implements TopicService {
         workbook.close();
     }
 
+    @Override
+    public int countTopicByAgeGroupId(String ageGroupId) {
+        return topicRepository.countByAgeGroupId(ageGroupId);
+    }
+
+    @Override
+    public List<TopicResponse> getAllTopicsByAgeGroupId(String ageGroupId) {
+        List<Topic> topics = topicRepository.findByAgeGroupId(ageGroupId);
+
+
+        return topics.stream().map(topicMapper::toTopicResponse).toList();
+    }
+
+    @Override
+    public void updateFavourite(String topicId) {
+        Topic topic = topicRepository.findById(topicId).orElseThrow(() -> new ApplicationException(ErrorCode.TOPIC_NOT_FOUND));
+        topic.setFavourite(!topic.isFavourite());
+        topicRepository.save(topic);
+    }
+
+    @Override
+    public TopicResponse getTopicInfo(String topicId) {
+        return topicRepository.findById(topicId)
+                .map(topicMapper::toTopicResponse)
+                .orElseThrow(() -> new ApplicationException(ErrorCode.TOPIC_NOT_FOUND));
+    }
 
 
 }

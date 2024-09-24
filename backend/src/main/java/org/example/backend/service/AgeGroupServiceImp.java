@@ -7,6 +7,8 @@ import org.example.backend.mapper.AgeGroupMapper;
 import org.example.backend.repository.AgeGroupRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class AgeGroupServiceImp implements AgeGroupService {
@@ -17,5 +19,11 @@ public class AgeGroupServiceImp implements AgeGroupService {
     public AgeGroup addAgeGroup(AddAgeGroupRequest addAgeGroupRequest) {
         AgeGroup ageGroup = ageGroupMapper.toAgeGroup(addAgeGroupRequest);
         return ageGroupRepository.save(ageGroup);
+    }
+
+    @Override
+    public List<AgeGroup> getAllAgeGroups() {
+
+        return ageGroupRepository.findAll();
     }
 }

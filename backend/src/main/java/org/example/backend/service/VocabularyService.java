@@ -6,5 +6,5 @@ import java.io.IOException;
 
 public interface VocabularyService {
     void addManyVocaubularyFromExcel(MultipartFile file) throws IOException;
-
+    long countVocabularyByAgeGroupId(String ageGroupId);
 }

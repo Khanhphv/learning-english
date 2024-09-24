@@ -1,18 +1,42 @@
 package org.example.backend.exception;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.backend.dto.response.ApiResponse;
+import org.example.backend.dto.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+
 import java.util.List;
 
 @RestControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {
+
+    @ExceptionHandler(value = RuntimeException.class)
+    public ResponseEntity<ApiResponse<Object>> handleRuntimeException(RuntimeException e){
+        log.error("RuntimeException: ", e);
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
+                ApiResponse.builder()
+                        .code(HttpStatus.INTERNAL_SERVER_ERROR.value())
+                        .message("An unexpected error occurred")
+                        .build()
+        );
+    }
+
+//    @ExceptionHandler(value = AccessDeniedException.class)
+//    public ResponseEntity<ApiResponse<Object>> handleAccessDeniedException(AccessDeniedException e){
+//        log.error("AccessDeniedException: ", e);
+//        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(
+//                ApiResponse.builder()
+//                        .code(HttpStatus.FORBIDDEN.value())
+//                        .message("Access denied")
+//                        .build()
+//        );
+//    }
+
 
     @ExceptionHandler(value = Exception.class)
     public ResponseEntity<ApiResponse<Object>> handleException(Exception e){

@@ -5,9 +5,11 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.example.backend.dto.response.ConversationResponse;
 import org.example.backend.entity.AgeGroup;
 import org.example.backend.entity.Conversation;
 import org.example.backend.entity.Topic;
+import org.example.backend.mapper.ConversationMapper;
 import org.example.backend.repository.ConversationRepository;
 import org.example.backend.repository.TopicRepository;
 import org.springframework.stereotype.Service;
@@ -25,6 +27,7 @@ import static org.example.backend.utils.ExcelUtil.isRowEmpty;
 @RequiredArgsConstructor
 @Slf4j
 public class ConversationServiceImp implements ConversationService {
+    private final ConversationMapper conversationMapper;
 
     private final ConversationRepository conversationRepository;
     private final TopicRepository topicRepository;
@@ -64,6 +67,12 @@ public class ConversationServiceImp implements ConversationService {
 
     }
 
+    @Override
+    public List<ConversationResponse> getAllConversationsByTopicId(String topicId) {
+
+        List<Conversation> conversations = conversationRepository.findAllByTopic_Id(topicId);
+        return conversations.stream().map(conversationMapper::toConversationResponse).toList();
+    }
 
 
 }

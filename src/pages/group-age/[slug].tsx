@@ -3,39 +3,52 @@ import { useEffect, useRef, useState } from "react";
 import Layout from "components/layout";
 import Head from "next/head";
 import styles from "./_.module.scss";
-import { GOOGLE_API_KEY, GOOGLE_API_PRE, COLUMNS } from "constants/googleapi";
 import useSWR from "swr";
 import { useSpring, animated, config } from "@react-spring/web";
+import { toast } from "sonner";
+import httpClient from "api-client/httpClient";
 
-const ranges = {
-  age3: "heart!B1:E10",
-  age4: "heart!B11:E20",
-  age5: "heart!B21:E30",
-  age6: "heart!B31:E39",
-  age7: "heart!B41:E50",
-  age8: "heart!B51:E60",
-  age9: "heart!B61:E70",
-  age10: "heart!B71:E80",
-  age11: "heart!B81:E90",
-  age12: "heart!B91:E101",
+
+export type TopicResponse = {
+  id: string;
+  title: string;
+  favourite: boolean;
 };
 
-const ListeningItem = ({ id, index, exercise, content, isHearted }) => {
+
+const ListeningItem = ({ id, index, title, content, isHearted }) => {
   const router = useRouter();
   const heartEmpty = "url('/heartempty.svg')";
   const heartFill = "url('/heartfill.svg')";
-  const [heart, setHeart] = useState(isHearted == "0" ? heartEmpty : heartFill);
-  const indexInSheet =
-    Number(id ? id.substring(3) : 0) * 10 + (index ? index : 1);
+  const [heart, setHeart] = useState(isHearted === true ? heartFill : heartEmpty);
+
+
+  // useEffect(() => {
+  //   setHeart(isHearted === "1" ? heartFill : heartEmpty);
+  // }, [isHearted]);
+
+  const updateFavourite = async (newStatus: boolean) => {
+    try{
+        await httpClient.put(`/topic/update-favourite/${id}`, {favourite: newStatus});
+        setHeart(heart === heartEmpty ? heartFill : heartEmpty);
+
+
+    }catch(erorr){
+      console.log(erorr);
+      toast.error("Error when updating favourite status");
+    }
+
+  }
 
   const handleHeart = () => {
-    setHeart(heart.length === 22 ? heartFill : heartEmpty);
+    const newStatus = heart === heartEmpty;
+    updateFavourite(newStatus);
   };
 
   return (
-    <div id={styles.item} className={styles.a} key={exercise}>
+    <div id={styles.item} className={styles.a}>
       <div className={styles.topic}>
-        <span className={styles.topicName}>{exercise}</span>
+        <span className={styles.topicName}>{title}</span>
         <span className={styles.index}>{index + 1}</span>
       </div>
       <hr />
@@ -55,7 +68,6 @@ const ListeningItem = ({ id, index, exercise, content, isHearted }) => {
           onClick={handleHeart}
           style={{
             background: `${heart}`,
-            backgroundSize: "cover",
           }}
           className={styles.heart}
         ></button>
@@ -64,59 +76,40 @@ const ListeningItem = ({ id, index, exercise, content, isHearted }) => {
   );
 };
 
+
+
 const ListeningExercise = () => {
-  const ageGroup = useRef([]);
-  const mnemonics = useRef([]);
-  const hearts = useRef([]);
+  const ageGroup = useRef<TopicResponse[]>([]);
   const router = useRouter();
   const { slug } = router.query;
-  const id = slug ? String(slug) : null;
+  const ageGroupId = slug ? String(slug) : null;
   const background = useSpring({
     from: {
       background: "#ff615d",
-     
     },
     to: [
-      { background: "#bad5ea"},
-      { background: "#fd8769"},
-      { background: "#356d94"},
-      { background: "#ffdcb3"},
+      { background: "#bad5ea" },
+      { background: "#fd8769" },
+      { background: "#356d94" },
+      { background: "#ffdcb3" },
     ],
     config: config.molasses,
     loop: { reverse: true },
   });
 
-  const fetcher = async (url: any) => {
-    const res = await fetch(url);
+  const { data, error } = useSWR(ageGroupId ? `/topic/${ageGroupId}`: null, {
+    revalidateOnMount: true,
+    revalidateOnFocus: false,
+  });
 
-    if (!res.ok) {
-      const error = new Error("an error occurred while fetching the data");
-      error.message = res.statusText;
-      throw error;
-    }
-
-    const jsonData = await res.json();
-    const filteredData = jsonData.values.map((row: any) =>
-      row.filter((cell: any) => cell !== "")
-    );
-
-    return filteredData;
-  };
-
-  const { data, error } = useSWR(
-    id ? `${GOOGLE_API_PRE}${ranges[id]}${COLUMNS}${GOOGLE_API_KEY}` : null,
-    fetcher,
-    { revalidateOnMount: true }
-  );
-
-  if (data) {
-    ageGroup.current = data[0];
-    mnemonics.current = data[2];
-    hearts.current = data[3];
+  if (data && data.result) {
+    ageGroup.current = data.result;
+    console.log(data);
   }
 
   if (error) {
-    return <div>An error occurred: {error}</div>;
+    console.log(error);
+    toast.error("Can not load data");
   }
 
   return (
@@ -133,12 +126,12 @@ const ListeningExercise = () => {
       </header> */}
       {ageGroup.current.map((exercise, index) => (
         <ListeningItem
-          key={exercise}
-          id={id}
+          key={index}
+          id={exercise.id}
+          title={exercise.title}
           index={index}
-          exercise={exercise}
-          content={mnemonics.current ? mnemonics.current[index] : "no content"}
-          isHearted={hearts.current ? hearts.current[index] : "0"}
+          content={exercise.title ? exercise.title : "no content"}
+          isHearted={exercise.favourite}
         />
       ))}
 

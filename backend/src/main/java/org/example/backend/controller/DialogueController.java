@@ -2,13 +2,13 @@ package org.example.backend.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.example.backend.dto.response.ApiResponse;
+import org.example.backend.dto.ApiResponse;
+import org.example.backend.dto.response.DialogueLineResponse;
 import org.example.backend.service.DialogueService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 @RestController
 @Slf4j
@@ -31,4 +31,9 @@ public class DialogueController {
         return ApiResponse.builder().build();
     }
 
+
+    @GetMapping("/{conversation-id}")
+    public ApiResponse<List<DialogueLineResponse>> getAllDialoguesByConversationId(@PathVariable("conversation-id") String conversationId){
+        return ApiResponse.<List<DialogueLineResponse>>builder().result(dialogueService.getAllDialoguesByConversationId(conversationId)).build();
+    }
 }

@@ -6,9 +6,11 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.example.backend.dto.response.DialogueLineResponse;
 import org.example.backend.entity.Conversation;
 import org.example.backend.entity.DialogueLine;
 import org.example.backend.entity.Topic;
+import org.example.backend.mapper.DialogueLineMapper;
 import org.example.backend.repository.ConversationRepository;
 import org.example.backend.repository.DialogueLineRepository;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.example.backend.utils.ExcelUtil.*;
 
@@ -26,6 +29,7 @@ import static org.example.backend.utils.ExcelUtil.*;
 @RequiredArgsConstructor
 @Slf4j
 public class DialogueServiceImp implements DialogueService {
+    private final DialogueLineMapper dialogueLineMapper;
 
     private final DialogueLineRepository dialogueLineRepository;
     private final ConversationRepository conversationRepository;
@@ -63,5 +67,12 @@ public class DialogueServiceImp implements DialogueService {
         }
         dialogueLineRepository.saveAll(dialogueLines);
         workbook.close();
+    }
+
+    @Override
+    public List<DialogueLineResponse> getAllDialoguesByConversationId(String conversationId) {
+        List<DialogueLine> dialogueLines = dialogueLineRepository.findAllByConversationId(conversationId);
+
+        return dialogueLines.stream().map(dialogueLineMapper::toDialogueLineResponse).toList();
     }
 }

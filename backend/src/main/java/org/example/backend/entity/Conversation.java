@@ -22,7 +22,7 @@ public class Conversation {
     @Builder.Default
     String id = UUID.randomUUID().toString();
     String title;
-
+    String youtubeVideo;
     @DBRef
     Topic topic;
 }

@@ -25,10 +25,8 @@ public class Topic {
 
     String title;
 
-    String youtubeVideo;
-
     String ageGroupId;
-
+    boolean favourite;
 
 
 }
