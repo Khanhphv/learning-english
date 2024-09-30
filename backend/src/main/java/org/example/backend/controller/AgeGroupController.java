@@ -35,4 +35,14 @@ public class AgeGroupController {
                 .result(ageGroups)
                 .build();
     }
+
+
+    @GetMapping("/{age-group-id}")
+    public ApiResponse<AgeGroup> getAgeGroupById(@PathVariable("age-group-id") String ageGroupId) {
+        AgeGroup ageGroup = ageGroupService.getAgeGroupById(ageGroupId);
+
+        return ApiResponse.<AgeGroup>builder()
+                .result(ageGroup)
+                .build();
+    }
 }

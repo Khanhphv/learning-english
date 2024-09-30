@@ -1,5 +1,5 @@
 import Layout from "components/layout";
-import ListeningCardComponent from "components/listening";
+import ListeningCardComponent from "components/learning-content/listening";
 import React, { useRef, useEffect } from "react";
 import {
   RangesHeart,
@@ -10,8 +10,8 @@ import { COLUMNS, ROWS } from "constants/googleapi";
 import { useRouter } from "next/router";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import LearnWords from "components/vocabulary";
-import FavoriteCardComponent from "components/favorites";
+import LearnWords from "components/learning-content/vocabulary";
+import FavoriteCardComponent from "components/learning-content/favorites";
 import styles from "./_.module.scss";
 import { useSpringRef, useSpring, animated } from "@react-spring/web";
 import MovingBackground from "components/background";

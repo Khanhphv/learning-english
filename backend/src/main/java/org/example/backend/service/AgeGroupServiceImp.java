@@ -5,6 +5,8 @@ import org.example.backend.dto.request.AddAgeGroupRequest;
 import org.example.backend.entity.AgeGroup;
 import org.example.backend.mapper.AgeGroupMapper;
 import org.example.backend.repository.AgeGroupRepository;
+import org.example.exercise_shop.exception.ApplicationException;
+import org.example.exercise_shop.exception.ErrorCode;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,5 +27,10 @@ public class AgeGroupServiceImp implements AgeGroupService {
     public List<AgeGroup> getAllAgeGroups() {
 
         return ageGroupRepository.findAll();
+    }
+
+    @Override
+    public AgeGroup getAgeGroupById(String ageGroupId) {
+        return ageGroupRepository.findById(ageGroupId).orElseThrow(() -> new ApplicationException(ErrorCode.AGE_GROUP_NOT_FOUND));
     }
 }

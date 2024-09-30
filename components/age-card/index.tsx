@@ -50,16 +50,32 @@ const AgeCardView = () => {
         navigation
         scrollbar={{ draggable: true }}
         breakpoints={{
-          668: { slidesPerView: 2 },
-          768: { slidesPerView: 3, spaceBetween: 5 },
-          1024: { slidesPerView: 3 },
+          320: {
+            slidesPerView: 1, 
+          },
+          640: {
+            slidesPerView: 2, 
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2, 
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: 3, 
+            spaceBetween: 20,
+          },
+          1280: {
+            slidesPerView: 4, 
+            spaceBetween: 20,
+          },
         }}
       >
         {ageGroups.current.map((ageCard: AgeGroup) => (
           <SwiperSlide key={ageCard.id} className={styles.slide}>
             <div>
               <div className="relative flex items-center justify-center">
-                <img className="rounded-2xl mb-4" src={ageCard.image} alt="" />
+                <img className="rounded-2xl mb-4 w-[300px]" src={ageCard.image} alt="" />
                 <button
                   onClick={() => router.push(`learning-content/${ageCard.id}`)}
                 >

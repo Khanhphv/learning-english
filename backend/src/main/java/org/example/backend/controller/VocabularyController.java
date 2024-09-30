@@ -3,9 +3,12 @@ package org.example.backend.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.example.backend.dto.ApiResponse;
+import org.example.backend.dto.response.VocabularyResponse;
 import org.example.backend.service.VocabularyService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/vocabulary")
@@ -29,6 +32,14 @@ public class VocabularyController {
     public ApiResponse<Long> countVocabularyByAgeGroupId(@PathVariable("age-group-id") String ageGroupId){
         return ApiResponse.<Long>builder()
                 .result(vocabularyService.countVocabularyByAgeGroupId(ageGroupId))
+                .build();
+    }
+
+
+    @GetMapping("/get-by-topic/{topic-id}")
+    public ApiResponse<List<VocabularyResponse>> findAllVocabularyByTopicId(@PathVariable("topic-id") String topicId){
+        return ApiResponse.<List<VocabularyResponse>>builder()
+                .result(vocabularyService.findAllVocabularyByTopicId(topicId))
                 .build();
     }
 }

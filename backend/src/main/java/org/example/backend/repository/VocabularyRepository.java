@@ -12,4 +12,8 @@ public interface VocabularyRepository extends MongoRepository<Vocabulary, String
 
     @Query(value = "{topicId: {$in:  ?0}}", count = true)
     long countByTopicIds(List<String> topicIds);
+
+    List<Vocabulary> findAllByTopicId(String topicId);
+
+
 }

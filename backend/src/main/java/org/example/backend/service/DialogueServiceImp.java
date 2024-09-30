@@ -75,4 +75,9 @@ public class DialogueServiceImp implements DialogueService {
 
         return dialogueLines.stream().map(dialogueLineMapper::toDialogueLineResponse).toList();
     }
+
+    @Override
+    public DialogueLineResponse findByEnglishSentenceIsLike(String englishSentence) {
+        return dialogueLineMapper.toDialogueLineResponse(dialogueLineRepository.findFirstByEnglishSentenceRegex( englishSentence));
+    }
 }

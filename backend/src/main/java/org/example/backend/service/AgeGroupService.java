@@ -9,4 +9,5 @@ public interface AgeGroupService {
 
     AgeGroup addAgeGroup(AddAgeGroupRequest addAgeGroupRequest);
     List<AgeGroup> getAllAgeGroups();
+    AgeGroup getAgeGroupById(String ageGroupId);
 }

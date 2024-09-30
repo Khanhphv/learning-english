@@ -3,25 +3,24 @@ import styles from "./_.module.scss";
 import AudioOperation from "./AudioOperations";
 import { TextToSpeechRequest, useTextToSpeech } from "api-client/textToSpeech";
 import { GENDER_NAMES } from "constants/ListListeningLessons";
+import { DialogueLine } from "./[...index]";
+import { toast } from "sonner";
 
-const Dialogue = ({ dialogue, audioSrc }: any) => {
+const Dialogue = ({ dialogueLines} : {dialogueLines: DialogueLine[] | undefined}) => {
   const [showDialogue, setShowDialogue] = useState(true);
   const [selectedText, setSelectedText] = useState<string>("");
   const [currentAudio, setCurrentAudio] = useState<number>(0);
-  const englishDialogue = dialogue[0];
-  const allAudio = dialogue[1];
-  const vietnameseDialogue = dialogue[2];
-  const getVoiceName = (text: string | undefined | null) => {
-    if (typeof text !== "string") {
+  const [english, setEnglish] = useState<string>("");
+  const [vietnamese, setVietnamese] = useState<string>("");
+  const [speaker, setSpeaker] = useState<string>("");
+  const getVoiceName = (speaker: string | undefined | null) => {
+    if (typeof speaker !== "string") {
       return "en-US-Neural2-C";
     }
 
-    const colonIndex = text.indexOf(":");
-    const voiceName = colonIndex !== -1 ? text.slice(0, colonIndex) : "";
-
-    if (GENDER_NAMES.maleNames.includes(voiceName)) {
+    if (GENDER_NAMES.maleNames.includes(speaker)) {
       return "en-US-Neural2-D";
-    } else if (GENDER_NAMES.femaleNames.includes(voiceName)) {
+    } else if (GENDER_NAMES.femaleNames.includes(speaker)) {
       return "en-US-Neural2-H";
     } else {
       return "en-US-Neural2-C";
@@ -34,19 +33,15 @@ const Dialogue = ({ dialogue, audioSrc }: any) => {
     },
     voice: {
       languageCode: "en-US",
-      name: getVoiceName(englishDialogue[currentAudio]),
+      name: getVoiceName(speaker),
     },
     audioConfig: {
       audioEncoding: "MP3",
     },
   };
 
-  if (!dialogue) {
-    return (
-      <div>
-        <span>Can not get data</span>
-      </div>
-    );
+  if (!dialogueLines) {
+    toast.error("Error when fetching data");
   }
 
   const { audioContent, isLoading, error, mutate } = useTextToSpeech(
@@ -54,34 +49,36 @@ const Dialogue = ({ dialogue, audioSrc }: any) => {
   );
   const audioUrl = audioContent ? `data:audio/mp3;base64,${audioContent}` : "";
 
+  if(error){
+    toast.error("Error when create audio");
+  }
 
   const handleShowDialog = () => {
     setShowDialogue(!showDialogue);
   };
 
-  const handleSelect = (text: string, index: number) => {
-    const colonIndex = text.indexOf(":");
-    const textAudio = colonIndex !== -1 ? text.slice(colonIndex + 1) : text;
+  const handleSelect = (english: string, vietnamese: string, index: number, speaker:string) => {
     setCurrentAudio(index);
-    setSelectedText(textAudio);
+    setSelectedText(english);
+    setSpeaker(speaker);
+    setEnglish(english);
+    setVietnamese(vietnamese);
   };
 
   const handleAudioEnd = () => {
-    if (currentAudio < englishDialogue.length - 1) {
-      const nextDialog = englishDialogue[currentAudio + 1];
-      handleSelect(nextDialog, currentAudio + 1);
+    const nextAudioIndex = currentAudio + 1;
+    if (dialogueLines && nextAudioIndex < dialogueLines.length) {
+      const nextDialogue = dialogueLines[nextAudioIndex];
+      handleSelect(nextDialogue.englishSentence, nextDialogue.vietnameseSentence, nextAudioIndex, nextDialogue.speaker);
     }
-    // else{
-    //   handleSelect(englishDialogue[0], 0);
-    // }
+    
   };
 
   return (
     <>
       <AudioOperation
-        english={englishDialogue}
-        audio={allAudio}
-        vietnamese={vietnameseDialogue}
+        english={english}
+        vietnamese={vietnamese}
         audioSrc={audioUrl}
         index={currentAudio}
         onAudioEnd={handleAudioEnd}
@@ -92,15 +89,15 @@ const Dialogue = ({ dialogue, audioSrc }: any) => {
         </div>
         {showDialogue && (
           <div className={styles.list}>
-            {englishDialogue.map((eng: string, index: number) => (
+            {dialogueLines && dialogueLines.map((dialogue: DialogueLine, index: number) => (
               <button
-                onClick={() => handleSelect(eng, index)}
-                key={eng}
+                onClick={() => handleSelect(dialogue.englishSentence, dialogue.vietnameseSentence, index, dialogue.speaker)}
+                key={dialogue.id}
                 className={styles.borderBottom}
               >
-                <span>{eng}</span>
-                <span id={styles.vietnamse}>
-                  <br /> {vietnameseDialogue[index]}
+                <span>{dialogue.englishSentence}</span>
+                <span style={{color: "#2c76c0"}}>
+                  <br /> {dialogue.vietnameseSentence}
                 </span>
               </button>
             ))}

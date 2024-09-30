@@ -1,27 +1,20 @@
 import { useState } from "react";
 import styles from "./_.module.scss";
-
-const Operations = ({ english, audio, vietnamese, audioSrc, onAudioEnd, index }: any) => {
+import { Switch } from "@/components/ui/switch";
+const Operations = ({
+  english,
+  vietnamese,
+  audioSrc,
+  onAudioEnd,
+  index,
+}: any) => {
   const [showSubtitle, setShowSubtitle] = useState(true);
   const [isLoop, setIsLoop] = useState(false);
-
-
-  if (!audio) {
-    return (
-      <div>
-        <span>Page not found - 404</span>
-      </div>
-    );
-  }
-
-
-
-  
 
   return (
     <>
       <div className={styles.audio}>
-        <span> Ấn vào chi tiết đoạn hội thoại để nghe theo đoạn</span>
+        <div className="mb-4"> Ấn vào chi tiết đoạn hội thoại để nghe theo đoạn</div>
         <div>
           <audio
             key={audioSrc}
@@ -36,29 +29,32 @@ const Operations = ({ english, audio, vietnamese, audioSrc, onAudioEnd, index }:
         </div>
 
         <div style={{ display: "flex" }}>
-          <input
-            className={styles.switch}
-            type="checkbox"
-            onChange={() => setIsLoop(!isLoop)}
+          <Switch
+            className="data-[state=unchecked]:bg-gray-400 data-[state=checked]:bg-green-400"
+            id="loop"
+            onCheckedChange={() => setIsLoop(!isLoop)}
+            checked={isLoop}
           />
-          <span style={{ margin: "2px 0px 0px 4px" }}>Vòng lặp</span>
+          <label htmlFor="loop" >Vòng lặp</label>
+
         </div>
-        <div style={{ display: "flex", marginTop: "10px" }}>
-          <input
-            className={styles.switch}
-            type="checkbox"
-            onChange={() => setShowSubtitle(!showSubtitle)}
+        <div className="flex mt-2 mb-2">
+          <Switch
+            className="data-[state=unchecked]:bg-gray-400 data-[state=checked]:bg-green-400"
+
+            onCheckedChange={() => setShowSubtitle(!showSubtitle)}
             checked={showSubtitle}
-          />
+          ></Switch>
+
           <span style={{ margin: "2px 0px 0px 4px" }}>Hiện subtitle</span>
         </div>
 
         <div style={{ paddingTop: "5px" }}>
           {showSubtitle && (
-            <span>
-              {english[index]} <br />{" "}
-              <span style={{ color: "#a07d7d" }}>{vietnamese[index]}</span>
-            </span>
+            <div>
+              {english} <br />{" "}
+              <div style={{ color: "#2c76c0" }}>{vietnamese}</div>
+            </div>
           )}
         </div>
       </div>

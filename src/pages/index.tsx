@@ -3,6 +3,7 @@ import Lottie from "lottie-react";
 import background from "constants/background.json";
 import Head from "next/head";
 import styles from "./page.module.scss";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Home = () => {
   return (

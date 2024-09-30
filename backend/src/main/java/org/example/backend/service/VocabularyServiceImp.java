@@ -4,9 +4,11 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.example.backend.dto.response.VocabularyResponse;
 import org.example.backend.entity.AgeGroup;
 import org.example.backend.entity.Topic;
 import org.example.backend.entity.Vocabulary;
+import org.example.backend.mapper.VocabularyMapper;
 import org.example.backend.repository.TopicRepository;
 import org.example.backend.repository.VocabularyRepository;
 import org.springframework.stereotype.Service;
@@ -23,6 +25,7 @@ import static org.example.backend.utils.ExcelUtil.isRowEmpty;
 @RequiredArgsConstructor
 @Slf4j
 public class VocabularyServiceImp implements VocabularyService{
+    private final VocabularyMapper vocabularyMapper;
 
     private final VocabularyRepository vocabularyRepository;
     private final TopicRepository topicRepository;
@@ -66,5 +69,12 @@ public class VocabularyServiceImp implements VocabularyService{
                 .toList();
 
         return vocabularyRepository.countByTopicIds(topicIds);
+    }
+
+    @Override
+    public List<VocabularyResponse> findAllVocabularyByTopicId(String topicId) {
+        List<Vocabulary> vocabularies = vocabularyRepository.findAllByTopicId(topicId);
+
+        return vocabularies.stream().map(vocabularyMapper::toVocabularyResponse).toList();
     }
 }

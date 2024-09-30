@@ -8,4 +8,5 @@ import java.util.List;
 public interface DialogueLineRepository extends MongoRepository<DialogueLine, String> {
     List<DialogueLine> findAllByConversationId(String conversationId);
 
+    DialogueLine findFirstByEnglishSentenceRegex(String englishSentence);
 }

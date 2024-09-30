@@ -36,4 +36,9 @@ public class DialogueController {
     public ApiResponse<List<DialogueLineResponse>> getAllDialoguesByConversationId(@PathVariable("conversation-id") String conversationId){
         return ApiResponse.<List<DialogueLineResponse>>builder().result(dialogueService.getAllDialoguesByConversationId(conversationId)).build();
     }
+
+    @GetMapping("/find-by-english-sentence/{english-sentence}")
+    public ApiResponse<DialogueLineResponse> findByEnglishSentenceIsLike(@PathVariable("english-sentence") String englishSentence){
+        return ApiResponse.<DialogueLineResponse>builder().result(dialogueService.findByEnglishSentenceIsLike(englishSentence)).build();
+    }
 }

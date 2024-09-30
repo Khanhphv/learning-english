@@ -25,7 +25,7 @@ const TextToSpeechFetcher = async (url: string, params: TextToSpeechRequest) => 
     return response.data;
 }
 
-export const useTextToSpeech = (params: TextToSpeechRequest) => {
+export const useTextToSpeech = (params: TextToSpeechRequest | null) => {
     const {data, error, mutate} = useSWR(params ? ['/text:synthesize', params] : null, ([url, params]) => TextToSpeechFetcher(url, params), {
         revalidateOnFocus: false,
         dedupingInterval:60* 10 * 1000,

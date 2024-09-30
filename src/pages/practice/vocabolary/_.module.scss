@@ -1,16 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One&display=swap");
+
+
 $back-color: #f7f5f3;
 
 .container {
   width: 100%;
   height: 100%;
+  font-family: "Itim", cursive;
 
+  
   .header {
+    font-family: "Itim", cursive;
     height: 100px;
     width: 100%;
     position: sticky;
     top: 0;
-    background-color: rgb(247, 245, 243);
-    box-shadow: 0px 7px 15px -5px rgba(128, 0, 0, 1);
+    background: linear-gradient(45deg, #75cbf6 0%, #ffffff 100%);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     z-index: 99;
     display: flex;
     align-items: center;
@@ -27,93 +34,13 @@ $back-color: #f7f5f3;
   .content {
     display: flex;
     min-width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+    
     @media screen and (max-width: 600px) {
       flex-direction: column;
-    }
-    .navigateButtons {
-      box-sizing: border-box;
-      flex: 1;
-      padding: 25px 60px 25px 60px;
-      cursor: pointer;
-      & :hover {
-        background-color: #e3eaea;
-      }
-      @media screen and (max-width: 600px) {
-        display: flex;
-        padding: 0px 10px 0px 10px;
-        justify-content: center;
-        & > * {
-          margin: 5px;
-        }
-      }
-      div {
-        padding: 20px;
-        margin-bottom: 20px;
-        border: 1px solid black;
-      }
-    }
-
-    .flashCard {
-      flex: 3;
-      .tagarea {
-        position: relative;
-        width: 50%;
-        max-width: 600px;
-        min-width: 250px;
-        height: 300px;
-        margin: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        transition: transform 0.4s;
-        transform-style: preserve-3d;
-        .tag,
-        .cardBack {
-          height: 100%;
-          width: 100%;
-          background-color: #e3eaea;
-          border-radius: 20px;
-          display: flex;
-          align-items: center;
-          border: 1px solid #80868b;
-          font-size: 200%;
-          position: absolute;
-          cursor: pointer;
-          backface-visibility: hidden;
-          span {
-            width: 100%;
-            text-align: center;
-          }
-        }
-        .cardBack {
-          transform: rotateX(180deg);
-        }
-      }
-
-      .example {
-        background-color: #e3eaea;
-        padding: 20px;
-      }
-    }
-
-    .otherTopics {
-      flex: 1;
-      background-color: $back-color;
-      margin: 20px;
-      padding: 20px;
-      border-radius: 20px;
-
-      .topic {
-        margin-top: 2px;
-        width: 100%;
-        padding: 8px;
-        text-align: start;
-        border-radius: 20px;
-        font-weight: bold;
-      }
-      & :hover {
-        background-color: #e3eaea;
-      }
-    }
+    }  
+   
   }
 
   .switch-button {
