@@ -80,5 +80,5 @@ const Alphabet = () => {
     </div>
   );
 };
-Alphabet.getLayout = Layout;
+Alphabet.getLayout = (page: any) => <Layout>{page}</Layout>;
 export default Alphabet;

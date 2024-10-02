@@ -26,5 +26,5 @@ const TableAge = () => {
   );
 };
 
-TableAge.getLayout = Layout;
+TableAge.getLayout = (page: any) => <Layout>{page}</Layout>;
 export default TableAge;

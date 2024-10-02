@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.backend.config.JwtTokenService;
 import org.example.backend.dto.request.RegisterRequest;
 import org.example.backend.entity.InvalidatedToken;
+import org.example.backend.entity.Role;
 import org.example.backend.entity.User;
 import org.example.backend.exception.ApplicationException;
 import org.example.backend.exception.ErrorCode;
@@ -45,6 +46,7 @@ public class AuthenticationService {
             throw new ApplicationException(ErrorCode.USER_ALREADY_EXISTS);
         }
         User user = userMapper.toUsser(registerRequest);
+        user.setRole(Role.STUDENT);
         user.setPassword(passwordEncoder.encode(registerRequest.getPassword()));
         return userRepository.save(user);
     }

@@ -123,5 +123,5 @@ const LovePage = () => {
   );
 };
 
-LovePage.getLayout = Layout;
+LovePage.getLayout = (page: any) => <Layout>{page}</Layout>;
 export default LovePage;

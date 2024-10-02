@@ -94,5 +94,5 @@ const GoldenRules = () => {
     </div>
   );
 };
-GoldenRules.getLayout = Layout
+GoldenRules.getLayout = (page: any) => <Layout>{page}</Layout>
 export default GoldenRules;

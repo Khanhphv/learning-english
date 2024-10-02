@@ -40,9 +40,9 @@ const Dialogue = ({ dialogueLines} : {dialogueLines: DialogueLine[] | undefined}
     },
   };
 
-  if (!dialogueLines) {
-    toast.error("Error when fetching data");
-  }
+  // if (!dialogueLines) {
+  //   toast.error("Error when fetching data");
+  // }
 
   const { audioContent, isLoading, error, mutate } = useTextToSpeech(
     params || {}

@@ -32,6 +32,7 @@ public class User implements UserDetails {
     String avatar;
     String firstName;
     String lastName;
+    String imageUrl;
 
 
     @Override

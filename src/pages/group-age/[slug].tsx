@@ -58,7 +58,7 @@ const ListeningItem = ({ id, index, title, content, isHearted }) => {
       <div className={styles.bottombuttons}>
         <button
           onClick={() => {
-            router.push(`/listening/${id}/${index + 1}`);
+            router.push(`/listening/${id}`);
           }}
           className={styles.play}
         >
@@ -143,5 +143,5 @@ const ListeningExercise = () => {
   );
 };
 
-ListeningExercise.getLayout = Layout;
+ListeningExercise.getLayout = (page: any) => <Layout>{page}</Layout>;
 export default ListeningExercise;

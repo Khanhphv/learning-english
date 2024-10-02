@@ -128,5 +128,5 @@ const TableOfContents = () => {
     </div>
   );
 };
-TableOfContents.getLayout = Layout;
+TableOfContents.getLayout = (page: any) => <Layout>{page}</Layout>;
 export default TableOfContents;

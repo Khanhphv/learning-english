@@ -37,7 +37,7 @@ const ListeningComponent = () => {
   const newWords = useRef<Vocabulary[]>([]);
   const router = useRouter();
   const { index } = router.query;
-  const topicId = index ? String(index[0]) : null;
+  const topicId = index ? index : null;
   const tranRef = useSpringRef();
   const style = useSpring({
     ref: tranRef,
@@ -56,7 +56,8 @@ const ListeningComponent = () => {
   }, []);
 
   const { data: conversation_data, error: conversation_error } = useSWR(
-    `/conversation/${topicId}`,
+    topicId ?
+    `/conversation/${topicId}` : null,
     {
       revalidateOnMount: true,
       revalidateOnFocus: false,
@@ -64,7 +65,8 @@ const ListeningComponent = () => {
   );
 
   const { data: topic_data, error: topic_error } = useSWR(
-    `/topic/info/${topicId}`,
+    topicId ?
+    `/topic/info/${topicId}` : null,
     {
       revalidateOnMount: true,
       revalidateOnFocus: false,
@@ -75,16 +77,15 @@ const ListeningComponent = () => {
     conversations.current = conversation_data.result;
     topic.current = topic_data.result;
 
-    // console.log(topic);
-    // console.log(conversations);
   }
 
-  if (conversation_error || !topicId) {
+  if (conversation_error) {
     toast.error("Error when getting topic info");
   }
 
   const { data: dialogue_data, error: dialogue_error } = useSWR(
-    `/dialogue/${conversations.current?.at(0)?.id}`,
+    conversations.current?.at(0)?.id ?
+    `/dialogue/${conversations.current?.at(0)?.id}` : null,
     {
       revalidateOnMount: true,
       revalidateOnFocus: false,
@@ -92,7 +93,8 @@ const ListeningComponent = () => {
   );
 
   const { data: new_words_data, error: new_words_error } = useSWR(
-    `/vocabulary/get-by-topic/${topicId}`,
+    topicId ?
+    `/vocabulary/get-by-topic/${topicId}` : null,
     {
       revalidateOnMount: true,
       revalidateOnFocus: false,
@@ -101,7 +103,6 @@ const ListeningComponent = () => {
 
   if (new_words_data) {
     newWords.current = new_words_data.result;
-    console.log(newWords.current);
   }
 
   if (new_words_error) {
@@ -171,5 +172,5 @@ const ListeningComponent = () => {
   );
 };
 
-ListeningComponent.getLayout = Layout;
+ListeningComponent.getLayout = (page: any) => <Layout>{page}</Layout>;
 export default ListeningComponent;

@@ -28,6 +28,6 @@ public class QuizQuestion {
     String correctAnswerId;
     String userAnswerId;
     boolean isCorrect;
-
+    QuestionType questionType;
 
 }

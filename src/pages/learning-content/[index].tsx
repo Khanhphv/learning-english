@@ -115,5 +115,5 @@ const LearningContent = () => {
   );
 };
 
-LearningContent.getLayout = Layout;
+LearningContent.getLayout = (page: any) => <Layout>{page}</Layout>;
 export default LearningContent;

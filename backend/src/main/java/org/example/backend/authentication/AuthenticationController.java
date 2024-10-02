@@ -73,8 +73,8 @@ public class AuthenticationController {
                 .build();
     }
 
-    @PostMapping("/check-username/{username}")
-    public ApiResponse<Boolean> checkUsername(@PathVariable String username){
+    @GetMapping("/check-username")
+    public ApiResponse<Boolean> checkUsername(@RequestParam(name = "username", defaultValue = "") String username){
         return ApiResponse.<Boolean>builder()
                 .result(authenticationService.checkUsername(username))
                 .message("Username is available")

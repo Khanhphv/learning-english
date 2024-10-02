@@ -25,5 +25,5 @@ public class Quiz {
     String userId;
     List<String> questionIds;
     boolean completed;
-
+    QuizType quizType;
 }

@@ -101,21 +101,21 @@ const Vocabolary = () => {
       <div className={styles.header}>
         <span>Lứa tuổi: {ageGroup?.name}</span>
       </div>
-      <div className="container mx-auto px-14 flex flex-col sm:grid sm:grid-cols-3 sm:grid-rows-2 gap-20 justify-center">
-        <div className="col-span-1 row-span-2">
+      <div className="container mx-auto px-14 grid sm:grid-cols-2 lg:grid-cols-3  gap-20 justify-center">
+        <div className="col-span-1">
           <NewWordSideBar
             topics={topics}
             currentTopic={topicId}
             handleClick={handleClick}
           />
         </div>
-        <div className="lg:col-span-1 md:col-span-2">
+        <div className="col-span-1">
           <CarouselWords
             vocabularies={vocabularies}
             findExample={findExample}
           />
         </div>
-        <div className="lg:col-span-1 md:col-span-2 md:row-start-2 md:col-start-2 ms:flex-col">
+        <div className="lg:col-span-1 sm:col-span-2 justify-center mb-10">
           <div className="shadow-lg bg-gradient-to-tr from-amber-200 shadow-gray-200 p-10 rounded-lg">
             <div>Example(Ví dụ):</div>
             <div>{dialogue_data?.result?.englishSentence ? dialogue_data?.result?.englishSentence : example}</div>
@@ -129,5 +129,5 @@ const Vocabolary = () => {
   );
 };
 
-Vocabolary.getLayout = Layout;
+Vocabolary.getLayout = (page: any) => <Layout>{page}</Layout>;
 export default Vocabolary;

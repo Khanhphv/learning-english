@@ -12,7 +12,7 @@ const LearnWords = ({newWord}: LearnWordsProps) => {
   const age = router.query.index ? String(router.query.index) : null;
 
   const handleButtonStart = () => {
-    router.push(`/practice/vocabolary/${age}`);
+    router.push(`/vocabulary/${age}`);
   };
 
 

@@ -19,7 +19,7 @@ export interface TextToSpeechRequest{
 }
 
 
-const TextToSpeechFetcher = async (url: string, params: TextToSpeechRequest) => {
+export const TextToSpeechFetcher = async (url: string, params: TextToSpeechRequest) => {
 
     const response  = await axiosClientForGoogleCloud.post(url,params);
     return response.data;

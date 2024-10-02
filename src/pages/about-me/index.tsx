@@ -242,4 +242,4 @@ export default function AboutMe() {
   );
 }
 
-// AboutMe.getLayout = Layout;
+AboutMe.getLayout = (page: any) => <Layout>{page}</Layout>;

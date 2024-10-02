@@ -1,25 +1,25 @@
 import axios from "axios";
-import { URL_GOOGLE_TEXT_TO_SPEECH, API_KEY_GOOGLE_CLOUD } from "constants/googleapi";
+import {
+  URL_GOOGLE_TEXT_TO_SPEECH,
+  API_KEY_GOOGLE_CLOUD,
+} from "constants/googleapi";
 
 const axiosClientForGoogleCloud = axios.create({
-  baseURL: URL_GOOGLE_TEXT_TO_SPEECH, 
+  baseURL: URL_GOOGLE_TEXT_TO_SPEECH,
   headers: {
     "Content-Type": "application/json",
   },
-  params:{
+  params: {
     key: API_KEY_GOOGLE_CLOUD,
-  }
+  },
 });
-
 
 axiosClientForGoogleCloud.interceptors.response.use(
   (response) => {
-    
     return response;
   },
-  
-  (error) => {
 
+  (error) => {
     return Promise.reject(error);
   }
 );

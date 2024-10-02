@@ -7,48 +7,49 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import { TextToSpeechRequest, useTextToSpeech } from "api-client/textToSpeech";
+import { Pagination, Scrollbar, A11y } from "swiper/modules";
+import { TextToSpeechRequest, useTextToSpeech, TextToSpeechFetcher } from "api-client/textToSpeech";
 
 const ListNewWord = ({ words }: { words: Vocabulary[] }) => {
   const [selectedWord, setSelectedWord] = useState<string>("");
   const audioRef = useRef<HTMLAudioElement>(null);
   
-  // Trạng thái để lưu trữ việc đã gọi API hay chưa
-  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [audioUrl, setAudioUrl] = useState<string>("");
+  const { isLoading, error, mutate } = useTextToSpeech(null);
 
-  const params: TextToSpeechRequest = {
-    input: {
-      text: selectedWord,
-    },
-    voice: {
-      languageCode: "en-US",
-      name: "en-US-Wavenet-D",
-    },
-    audioConfig: {
-      audioEncoding: "MP3",
-    },
-  };
-
-  const { audioContent, isLoading, error, mutate } = useTextToSpeech(
-    isSpeaking ? params : null // Chỉ gọi API khi isSpeaking là true
-  );
-
-  const audioUrl = audioContent ? `data:audio/mp3;base64,${audioContent}` : "";
-
-  const handleSelectedWord = (word: string) => {
+  const handleSelectedWord = async (word: string) => {
     setSelectedWord(word);
-    setIsSpeaking(true); // Đánh dấu là đang nói
-  }
+  
+    const params: TextToSpeechRequest = {
+      input: {
+        text: word,
+      },
+      voice: {
+        languageCode: "en-US",
+        name: "en-US-Wavenet-D",
+      },
+      audioConfig: {
+        audioEncoding: "MP3",
+      },
+    };
+  
+    try {
+      const data = await TextToSpeechFetcher("/text:synthesize", params);
+      if (data) {
+        setAudioUrl(`data:audio/mp3;base64,${data.audioContent}`);
+      }
+    } catch (error) {
+      console.error("Error fetching audio:", error);
+    }
+  };
 
   useEffect(() => {
     if (audioUrl && audioRef.current) {
       audioRef.current.src = audioUrl;
       audioRef.current.play();
       console.log("play");
-      // Reset trạng thái isSpeaking sau khi phát xong
       audioRef.current.onended = () => {
-        setIsSpeaking(false);
+        setAudioUrl(""); 
       };
     }
   }, [audioUrl]);

@@ -3,11 +3,22 @@ import Head from "next/head";
 import { SWRConfig } from "swr";
 import httpClient from "api-client/httpClient";
 import { Toaster } from "sonner";
+import { Provider } from "react-redux";
+import { store } from "@/stores";
+
 export default function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
+
+ 
   return (
-    
-      <SWRConfig value={{fetcher:  async (url: string) => await httpClient.get(url), shouldRetryOnError:false}}>
+    <Provider store={store}>
+      <SWRConfig
+        value={{
+          fetcher: async (url: string) => await httpClient.get(url),
+          shouldRetryOnError: false,
+          
+        }}
+      >
         <Toaster expand={true} position="top-center" richColors />
         <Head>
           <meta
@@ -22,6 +33,6 @@ export default function MyApp({ Component, pageProps }) {
         </Head>
         {getLayout(<Component {...pageProps} />)}
       </SWRConfig>
-    
+    </Provider>
   );
 }

@@ -21,5 +21,5 @@ const Home = () => {
     </>
   );
 };
-Home.getLayout = Layout;
+Home.getLayout = (page) => <Layout>{page}</Layout>;
 export default Home;
