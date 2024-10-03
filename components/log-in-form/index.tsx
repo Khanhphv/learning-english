@@ -20,6 +20,8 @@ import { useDispatch } from "react-redux";
 import { loginSuccess } from "@/slices/authSlice";
 import { useRouter } from "next/router";
 import { hideTabSignInRegister } from "@/slices/tabSignInRegisterSlice";
+import { Input } from "@/components/ui/Input";
+
 const formSchema = z.object({
   username: z.string().min(1, "Username is required"),
   password: z.string().min(1, "Password is required"),
@@ -49,7 +51,7 @@ const router = useRouter();
       if (response) {
         console.log("Response:", response);
         localStorage.setItem("accessToken", response.result.accessToken);
-        localStorage.setItem("userRole", response.result.userRole);
+        localStorage.setItem("userRole", response.result.role);
         dispatch(
           loginSuccess({
             accessToken: response.result.accessToken,
@@ -75,7 +77,7 @@ const router = useRouter();
             <FormItem>
               <FormLabel className="text-slate-500">Username</FormLabel>
               <FormControl>
-                <input
+                <Input
                   className="border-2 focus:border-gray-400 focus-visible:ring-offset-0 focus-visible:ring-transparent hover:bg-slate-50"
                   placeholder="username"
                   {...field}
@@ -94,7 +96,7 @@ const router = useRouter();
               <FormLabel className="text-slate-500">Password</FormLabel>
               <div className="relative">
                 <FormControl>
-                  <input
+                  <Input
                     className="border-2 focus:border-gray-400 focus-visible:ring-offset-0 focus-visible:ring-transparent hover:bg-slate-50"
                     type={showPassword ? "text" : "password"}
                     placeholder="password"

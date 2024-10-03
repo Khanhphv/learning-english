@@ -24,10 +24,10 @@ public class QuizQuestion {
 
     @DBRef
     Vocabulary vocabulary;
-    List<String> options;
-    String correctAnswerId;
+    List<Option> options;
     String userAnswerId;
     boolean isCorrect;
+    boolean isAnswered;
     QuestionType questionType;
 
 }

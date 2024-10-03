@@ -19,7 +19,8 @@ public enum ErrorCode {
     PASSWORD_INVALID(1005, "Password must contain at least one uppercase letter, one lowercase letter, one digit and one special character"),
     INVALID_TOKEN(1006, "Invalid token"),
     USER_ALREADY_EXISTS(1007, "User already exists"),
-    ;
+    NON_VOCABULARY(1008, "Non vocabulary"),
+    INVALID_QUESTION_TYPE(1009, "Invalid question type when generating" );
     final int code;
     final String message;
 }

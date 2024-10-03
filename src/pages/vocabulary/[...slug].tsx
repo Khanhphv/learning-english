@@ -89,12 +89,17 @@ const Vocabolary = () => {
   }, [topics_data, age_group_data, vocabularies_data, dialogue_error, vocabularies_error, topics_error, age_group_error]);
 
   const handleClick = (topicId: string) => {
-    router.push(`/practice/vocabolary/${ageId}/${topicId}`);
+    router.push(`/vocabulary/${ageId}/${topicId}`);
   };
 
   const findExample = (word: string) => {
     setExample(word);
   };
+
+  const handleButtonTest = (topic: string) => {
+    router.push(`/exam/${topic ? topic : topics[0]?.id}`);
+  }
+
 
   return (
     <div className={styles.container}>
@@ -121,7 +126,7 @@ const Vocabolary = () => {
             <div>{dialogue_data?.result?.englishSentence ? dialogue_data?.result?.englishSentence : example}</div>
           </div>
           <div className="text-center mt-5">
-            <Button className="hover:bg-red-500 bg-red-400" variant={"outline"}> <BookCheck />Kiểm tra tại đây!</Button>
+            <Button onClick={() => handleButtonTest(topicId)} className="hover:bg-red-500 bg-red-400" variant={"outline"}> <BookCheck />Kiểm tra tại đây!</Button>
           </div>
         </div>
       </div>

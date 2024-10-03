@@ -18,6 +18,7 @@ import { toast } from "sonner";
 import AuthApi from "api-client/authApi";
 import { useDispatch } from "react-redux";
 import { loginSuccess } from "@/slices/authSlice";
+import { Input } from "@/components/ui/Input";
 
 const formSchema = z.object({
   username: z
@@ -95,7 +96,7 @@ const RegisterForm = () => {
             <FormItem>
               <FormLabel className="text-slate-500">Username</FormLabel>
               <FormControl>
-                <input
+                <Input
                   className="border-2 focus:border-gray-400 focus-visible:ring-offset-0 focus-visible:ring-transparent hover:bg-slate-50"
                   placeholder="Student123"
                   {...field}
@@ -114,7 +115,7 @@ const RegisterForm = () => {
               <FormLabel className="text-slate-500">Password</FormLabel>
               <div className="relative">
                 <FormControl>
-                  <input
+                  <Input
                     className="border-2 focus:border-gray-400 focus-visible:ring-offset-0 focus-visible:ring-transparent hover:bg-slate-50"
                     type={showPassword ? "text" : "password"}
                     placeholder="@Student123"
@@ -146,7 +147,7 @@ const RegisterForm = () => {
               <FormLabel className="text-slate-500">Confirm Password</FormLabel>
               <div className="relative">
                 <FormControl>
-                  <input
+                  <Input
                     className="border-2 focus:border-gray-400 focus-visible:ring-offset-0 focus-visible:ring-transparent hover:bg-slate-50"
                     type={showPassword ? "text" : "password"}
                     placeholder="confirm password"

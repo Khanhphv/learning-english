@@ -15,5 +15,4 @@ public interface VocabularyRepository extends MongoRepository<Vocabulary, String
 
     List<Vocabulary> findAllByTopicId(String topicId);
 
-
 }

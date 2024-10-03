@@ -14,6 +14,6 @@ spring:
 jwt:
   signer-key: "bTjB9aNwmnrGaTjQEBciTlZlC6iYu3q8uqOCQbIX25FSgkDBLnQ+m6yMZOX1VqJU"
   access:
-    expiration: "20" #in second
+    expiration: "3600" #in second
   refresh:
     expiration: "12000" #in second
