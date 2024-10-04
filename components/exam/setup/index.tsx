@@ -3,9 +3,12 @@ import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import { TextToSpeechRequest } from "api-client/textToSpeech";
 
 const SetupExam = ({ handleSubmit, handleClose }: { handleSubmit: (numberOfQuestions: number) => void, handleClose: () => void }) => {
   const [questions, setQuestions] = useState(20);
+
+  
 
   return (
     <div>
@@ -24,7 +27,7 @@ const SetupExam = ({ handleSubmit, handleClose }: { handleSubmit: (numberOfQuest
                 type="number"
                 value={questions}
                 onChange={(e) => setQuestions(Number(e.target.value))}
-                max={96}
+                min={1}
               />
             </div>
             <Button onClick={() => handleSubmit(questions)} className="w-full">Start test</Button>

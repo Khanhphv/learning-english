@@ -1,6 +1,7 @@
 package org.example.backend.config;
 
 
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 
 import org.example.backend.entity.Role;
@@ -22,7 +23,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @RequiredArgsConstructor
 public class SecurityConfig {
     private final JwtRequestFilter jwtRequestFilter;
-    private final String[] PUBLIC_URL = {"/api/v1/authenticate", "/api/v1/register", "/api/v1/check-username/**", "/api/v1/age-group/**", "/api/v1/conversation/**", "/api/v1/dialogue/**", "/api/v1/topic/**", "/api/v1/vocabulary/**"};
+    private final String[] PUBLIC_URL = {"/api/v1/authenticate", "/api/v1/register", "/api/v1/check-username/**", "/api/v1/age-group/**", "/api/v1/conversation/**", "/api/v1/dialogue/**", "/api/v1/topic/**", "/api/v1/vocabulary/**", "/api/v1/logout", "/api/v1/refresh/**"};
     private final ApplicationConfig applicationConfig;
     private final AuthenticationProvider authenticationProvider;
     private final String[] STUDENT_URL = {"/api/v1/quizzes/**"};
@@ -41,9 +42,7 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider)
                 .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
-        http.logout(logout -> logout
-                .logoutRequestMatcher(new AntPathRequestMatcher("/api/v1/logout"))
-                .invalidateHttpSession(true));
+
 
         return http.build();
     }

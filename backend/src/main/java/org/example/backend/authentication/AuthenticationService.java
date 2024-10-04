@@ -102,33 +102,45 @@ public class AuthenticationService {
     }
 
     @Transactional
-    public void logout(LogoutRequest request, HttpServletRequest httpServletRequest){
-        String username = jwtTokenService.extractUsername(request.getToken());
-        User user = userRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("User not found"));
-        if (jwtTokenService.validateToken(request.getToken(), user)){
+    public void logout(LogoutRequest request, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
 
-            InvalidatedToken invalidatedToken = InvalidatedToken.builder()
-                    .id(jwtTokenService.extractClaim(request.getToken(), Claims::getId))
-                    .expiryDate(jwtTokenService.extractClaim(request.getToken(), Claims::getExpiration))
-                    .build();
-            invalidatedTokenRepository.save(invalidatedToken);
+        SecurityContextHolder.clearContext();
+        try {
+            String username = jwtTokenService.extractUsername(request.getToken());
+            User user = userRepository.findByUsername(username)
+                    .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
-            Cookie[] cookies = httpServletRequest.getCookies();
+            if (jwtTokenService.validateToken(request.getToken(), user)) {
+                InvalidatedToken invalidatedToken = InvalidatedToken.builder()
+                        .id(jwtTokenService.extractClaim(request.getToken(), Claims::getId))
+                        .expiryDate(jwtTokenService.extractClaim(request.getToken(), Claims::getExpiration))
+                        .build();
+                invalidatedTokenRepository.save(invalidatedToken);
+                log.info("Token invalidated successfully for user: {}", username);
+            }
+
+        } catch (Exception e) {
+            log.warn("Failed to validate token, proceeding with logout. Error: {}", e.getMessage());
+        }
+
+
+        Cookie[] cookies = httpServletRequest.getCookies();
+        if (cookies != null) {
             Arrays.stream(cookies)
-                    .filter(cookie -> cookie.getName().equals("refreshToken"))
+                    .filter(cookie -> "refreshToken".equals(cookie.getName()))
                     .findFirst()
                     .ifPresent(cookie -> {
                         cookie.setMaxAge(0);
                         cookie.setPath("/");
+                        cookie.setHttpOnly(true);
+                        httpServletResponse.addCookie(cookie);
+                        log.info("Refresh token cookie removed.");
                     });
-
-            log.info("success");
-        }else{
-            throw new ApplicationException(ErrorCode.INVALID_TOKEN);
         }
 
-
+        log.info("User logged out successfully.");
     }
+
 
     public boolean checkUsername(String username){
         return userRepository.existsUserByUsername(username);

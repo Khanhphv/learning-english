@@ -65,10 +65,10 @@ public class AuthenticationController {
     }
 
     @PostMapping("/logout")
-    public ApiResponse<Object> logout(@RequestBody LogoutRequest request, HttpServletRequest httpServletRequest){
-        authenticationService.logout(request, httpServletRequest);
+    public ApiResponse<Object> logout(@RequestBody LogoutRequest request, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
+        authenticationService.logout(request, httpServletRequest, httpServletResponse);
 
-        return  ApiResponse.builder()
+        return ApiResponse.builder()
                 .message("Logout Successfully")
                 .build();
     }

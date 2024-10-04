@@ -8,7 +8,7 @@ import { RootState } from "@/stores";
 import { useSelector, useDispatch } from "react-redux";
 import { showTabSignInRegister } from "@/slices/tabSignInRegisterSlice";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { loginSuccess } from "@/slices/authSlice";
+import { loginSuccess, logout } from "@/slices/authSlice";
 import useSession from "@/hooks/useSession";
 import {
   DropdownMenu,
@@ -24,18 +24,30 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import AuthApi from "api-client/authApi";
+import { toast } from "sonner";
 
 const Layout = ({ children }) => {
   const dispatch = useDispatch();
   const { showTab } = useSelector(
     (state: RootState) => state.tabSignInRegister
   );
-  const { isAuthenticated } = useSelector((state: RootState) => state.auth);
-
+  const { isAuthenticated, accessToken } = useSelector((state: RootState) => state.auth);
+  
   useSession();
   const handleTabs = () => {
     dispatch(showTabSignInRegister());
   };
+
+  const handleLogout = async () => {
+  
+    const response = await AuthApi.logout(accessToken);
+    console.log("Logout response:", response);
+    if (response) {
+      dispatch(logout());
+    }
+    toast.success("Logout successfully");
+  }
 
   return (
     <div className="main">
@@ -64,7 +76,7 @@ const Layout = ({ children }) => {
                   </DropdownMenuGroup>
                   <DropdownMenuSeparator />
 
-                  <DropdownMenuItem>Log out</DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleLogout}>Log out</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (

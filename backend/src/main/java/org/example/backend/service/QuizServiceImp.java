@@ -59,7 +59,7 @@ public class QuizServiceImp implements QuizService{
                 .isCorrect(true)
                 .build());
 
-        while (options.size() < 4){
+        while (options.size() < 4 && questionType != QuestionType.SPEAK){
             Vocabulary randomVocabulary = vocabularies.get(new Random().nextInt(vocabularies.size()));
             String randomAnswer = generateAnswer(randomVocabulary, questionType);
 

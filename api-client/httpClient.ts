@@ -45,11 +45,12 @@ httpClient.interceptors.response.use(
       ) {
         originalRequest._retry = true;
         try {
-          const newTokens = await httpClient.post("/refresh", null, {
-            withCredentials: true,
-          });
-          store.dispatch(updateAccessToken(newTokens.data.accessToken));
-          originalRequest.headers.Authorization = `Bearer ${newTokens.data.accessToken}`;
+          const newTokens = await httpClient.post("/refresh");
+          localStorage.setItem("accessToken", newTokens.result.accessToken);
+          store.dispatch(updateAccessToken(newTokens.result.accessToken));
+          originalRequest.headers.Authorization = `Bearer ${newTokens.result.accessToken}`;
+          console.log("New access token:", newTokens.result.accessToken);
+          console.log("Original request:", originalRequest);
           return httpClient(originalRequest);
         } catch (error) {
           console.log("Refresh token error:", error);
