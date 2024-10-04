@@ -1,0 +1,910 @@
+[{
+  "_id": "59548e33-509f-4627-bb9f-c69614e05395",
+  "title": "Youtube video",
+  "youtubeVideo": "https://www.youtube.com/watch?v=ezmsrB59mj8",
+  "topic": {
+    "$ref": "topics",
+    "$id": "22413226-260c-420c-a4d8-833d6e9ab323"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "995be050-c48e-468e-80f8-27f87e2e8798",
+  "title": "Youtube video",
+  "youtubeVideo": "https://www.youtube.com/watch?v=D0Ajq682yrA",
+  "topic": {
+    "$ref": "topics",
+    "$id": "53437c27-b4d1-4512-94cd-092a371e8bf4"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "fa5ca143-c8ed-4c89-9b5b-a233b8fd2e09",
+  "title": "Youtube video",
+  "youtubeVideo": "https://www.youtube.com/watch?v=moNlFRgNob4",
+  "topic": {
+    "$ref": "topics",
+    "$id": "f2ea2dbe-cd38-42d9-8672-e41f0e0e75fb"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "bab0c6c4-2971-4db2-99ec-7cae2e260e03",
+  "title": "Youtube video",
+  "youtubeVideo": "https://www.youtube.com/watch?v=VdzzE20zQC8",
+  "topic": {
+    "$ref": "topics",
+    "$id": "6ef4f178-1664-4ec6-95fc-54ca7cd8b512"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "92ffcc60-55a7-4939-b247-ccdbed387d8a",
+  "title": "Youtube video",
+  "youtubeVideo": "https://www.youtube.com/watch?v=aJef0Ep75Q0",
+  "topic": {
+    "$ref": "topics",
+    "$id": "13f82839-69fb-47c6-8e23-45700b8f3f03"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "5d7f654f-f0d5-47d2-a35f-33fbfe8afb7c",
+  "title": "Youtube video",
+  "youtubeVideo": "https://www.youtube.com/watch?v=d_WQEw13TCo",
+  "topic": {
+    "$ref": "topics",
+    "$id": "92d0a89d-c35b-4054-845c-6855ff6fee55"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "b5734dc1-b83e-4de8-a2da-01f133ee0085",
+  "title": "Youtube video",
+  "youtubeVideo": "https://www.youtube.com/watch?v=6IwulRrYnzQ",
+  "topic": {
+    "$ref": "topics",
+    "$id": "2db4b5d4-957c-4bf6-9d45-e592a40a41b1"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "347f6882-b182-480c-88df-adc204d200b0",
+  "title": "Youtube video",
+  "youtubeVideo": "https://www.youtube.com/watch?v=SUt8q0EKbms",
+  "topic": {
+    "$ref": "topics",
+    "$id": "af89c03a-055d-471b-a1d8-255733498bd6"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "4856e884-905b-4792-837e-9a61e8d58280",
+  "title": "Youtube video",
+  "youtubeVideo": "https://www.youtube.com/watch?v=Q_EwuVHDb5U",
+  "topic": {
+    "$ref": "topics",
+    "$id": "7c5852d0-d287-431e-9b39-3d7c5550448d"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "95e4a2ab-9e1f-49cb-855a-1a8ebd236873",
+  "title": "Youtube video",
+  "youtubeVideo": "https://www.youtube.com/watch?v=CXKj7bm4Ops",
+  "topic": {
+    "$ref": "topics",
+    "$id": "471bd98a-d66e-4ed6-9267-0ddf63f7db66"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "a70e9cac-d3db-45ec-9c67-f733f99e62ff",
+  "title": "Wally's big elephant got down to play the tuba softly.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "426f8de9-1cc0-4631-a60f-ab53deb3fd96"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "c5f28128-9366-4c9c-8918-6abbfc6b9e67",
+  "title": "A Big Orange Grapefruit Sits With Cherries, Pineapples, Kiwis, Plums, And Mangos.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "34835a49-1984-46f6-b877-8289c4b032bf"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "ffded74c-3fe6-41e8-baa4-90d7e7ef42d8",
+  "title": "Can Peter take care of cooking broccoli, corn, peas, lettuce, onions, spinach, cauliflower, and pumpkin?",
+  "topic": {
+    "$ref": "topics",
+    "$id": "bfb15f9d-2793-46bf-b831-94f87695f81f"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "e3a34827-1238-43c3-9df8-3adc3432f194",
+  "title": "Can Bob take a plane before my brother sees him?",
+  "topic": {
+    "$ref": "topics",
+    "$id": "a0a3a5cc-7b77-439f-a095-858384cd8572"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "5a24f6f7-57cc-4d2a-85e0-9868d087ad10",
+  "title": "Big Sam fastened slow yachts, old cars cleaned dirty windows, full bags felt empty, heavy books felt light, tall trees grew soft leaves.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "c4362b85-e660-4198-a3d3-3a4e6e2264c0"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "cfbe5eee-bb71-4b6b-a096-f76a1bba5aac",
+  "title": "Some People Are Wonderfully Fragrant Like Snowy Roses In Rainy Harvests Of Hot And Cold Seasons.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "218ef77a-9937-4f36-bcb4-eb777a70e3e7"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "daa66dc8-19aa-4401-bbb5-22476c47e166",
+  "title": "Hannah's silly parrot sat lazily on Zack's messy bed, reading a book about crazy animals, hoping to visit a restaurant, airport, beach, and cinema.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "414c29cc-e183-4caa-b4dd-e21f98f89adc"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "50dd1b07-a845-4868-9e5f-59a45bc53007",
+  "title": "RJSDSDWRCLESLC",
+  "topic": {
+    "$ref": "topics",
+    "$id": "3d13ba9e-b1f1-4ea7-8d83-8fb5abfbd85c"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "5a535776-4816-4973-81ae-22d72b064eb3",
+  "title": "Harry said, \"A scary surprise made me tired, shy, and excited, but now I'm proud and calm.\"",
+  "topic": {
+    "$ref": "topics",
+    "$id": "edc50d3b-7001-4cd6-8d81-d2192a5fff28"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "06f38d45-967e-434d-ae0e-f7f9f97d4377",
+  "title": "Don't be careless, play with colorful toys and build a robot while flying a kite and solving a puzzle with a teddy bear and a board game.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "64cb51d6-35ea-4c5d-93c1-280177c83b3b"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "0de30b0c-4c00-4b1f-a312-7bf64a205722",
+  "title": "The friendly giraffe saw many rare objects, from trees and flowers to grass and sky, mountains and rivers, oceans and beaches, forests and deserts, hills and valleys, lakes and waterfalls.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "9faba3e1-a9d9-445c-99d1-70f9eae43f8b"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "fba865e3-dd84-473d-89db-e9c2f5ba6c75",
+  "title": "My teacher wants the students to remember seven days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "509ef4a1-9308-4b97-8627-55cf1c4347b5"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "89e3dce6-a878-4bfc-b9c6-b85a1326fac5",
+  "title": "Jolly farmers march around making jelly, just as Uncle Sam orders new decorations.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "ec57eea4-b512-4ed3-91e7-2603f278639b"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "ddd8e260-d857-4afc-8a63-9a511e53ffe6",
+  "title": "My aunt eats noodles on Wednesdays, making her yawn early, late at night, now and later.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "70b3e569-6c69-4395-a4fb-1ff7d58ca3b2"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "13f1204b-bad0-445c-bf1a-9549444d5e37",
+  "title": "The teacher and student entered the class, sat at their desk and chair, opened their book, grabbed a pencil, eraser, ruler, and paper, and began writing on the chalkboard while the backpacks were stored away.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "02151fef-c142-4f40-9071-7a440ea10043"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "32e9b2ef-5131-4d8f-a617-5ecfdf6d90ed",
+  "title": "Lions, bears, kangaroos, baboons, hippos, snakes, rhinos, dogs, wolves, gorillas, elephants, zebras, foxes.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "e82e6d90-0027-40a4-a25f-334aac8f975f"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "bdddb6b7-500d-43f7-a5d9-9efbd384c987",
+  "title": "Don't need to fear the dentist, mechanic, or painter, but trust the doctor, nurse, teacher, firefighter, police officer, baker, farmer, and cashier.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "a28b6372-0c0c-429f-a9f5-8488563f899a"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "8381d862-be84-4760-8f49-b0bc788bdf00",
+  "title": "Silly tigers can see big buildings, stores, banks, post offices, hotels, and gas stations from the street, traffic light, crosswalk, and sidewalk near the bus stop.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "62cc348c-d774-408c-bcc8-a00b65c08628"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "17b6b89e-e85c-4e59-b76d-d2bff91cd234",
+  "title": "Sandy seas shell waves, seagulls starfish crabs and seaweed, beach balls and umbrellas, towels and sunscreen, swimsuits and sunglasses.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "0486d450-d510-4e9a-93b6-70398b148439"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "f0a6cffc-22ff-49f5-944c-9f9757c599c7",
+  "title": "People do really well dancing, singing, and playing instruments, but prefer reading, writing, gardening, and photography over painting and sports.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "a5a621f2-adf0-4de3-b0a9-5fa4941f1f08"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "54d348f6-af83-4a35-b356-0a6ef5318bcf",
+  "title": "Some Boys Buy Swanky Tennis Gear Very Happily, Gymnastics Can Really Run.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "be1aeda3-5e66-4427-bf85-f47f1a94cbc6"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "ce7f2e8d-ce9b-4b28-ad02-7ea278a82d91",
+  "title": "Some unicorns never play except jumping sideways and galloping through asteroids, galaxies, telescopes, and astronauts.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "a2c340e2-8f42-4c56-a09a-d7cb598ad371"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "ba0aaca8-df9f-4a61-bad8-48850f37b838",
+  "title": "The horrible natural disasters caused by earth's violent reactions: tornado, hurricane, flood, drought, earthquake, tsunami, avalanche, blizzard, rainbow, volcano.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "5e93be22-12b9-46b8-b9b0-0db16d36707f"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "1373bb2b-e2f4-4fc4-87e3-e9d3b5bfb4f3",
+  "title": "Just Some Friendly Otters Don't Take Wet Coral Raincoats Swimming.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "6fa96ec2-8687-48bb-b85f-67789c095b0a"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "45e9664f-9996-44cc-bc94-73994a509ab8",
+  "title": "Can Tom See It? Every Video Game Can Take Really High-quality Recordings.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "60457d22-c4da-4f84-8788-12be324f9c84"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "5cee7b19-1663-43a9-a831-f74a6984706c",
+  "title": "Paula's suitcase made compass tick, hotel guide showed vacation destination journey.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "5ef4c2e9-4125-48a1-9a84-3565bec9d4ac"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "df92bb87-7de0-4688-b5cb-ebe87ad97768",
+  "title": "Can Harry eat the very nice birthday cake in July?",
+  "topic": {
+    "$ref": "topics",
+    "$id": "11455d9c-b84a-4560-8d2b-e8bdb2da7187"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "fa6c87c7-df4d-409d-950f-b7ac465272a5",
+  "title": "I fear young mice can make great leaps, but cats tend to get lured.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "364847d7-635e-42b8-958c-ad8f012ce96f"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "3f994394-78c5-4218-b656-81e6fbbd04c4",
+  "title": "My Little Very Pretty Elephant Gave Chef Lemon Juice Regularly.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "95e7467a-0bdf-419e-9cf1-9cf504ec1f93"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "0651cb1c-6e87-4c4c-b4f0-b8ac03f5919d",
+  "title": "My very happy platypus can't contain its powerful volcanic glow.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "1600d8db-6331-4855-bfcd-cb33ac9f529e"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "5eeb33cd-87aa-4085-ade6-a22bf8bd1873",
+  "title": "Uncle Sam can't forget countries like China, India, France, Canada, Brazil, Japan, Australia, London, New York, Paris, and Tokyo.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "73b9ab40-89f8-4a43-95dd-114c5693814c"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "e5338427-36c4-490b-be8c-bcc98cbf1a16",
+  "title": "A Man Made Every Delicious Recipe With Extraordinary Care and Creativity.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "47d1bbb6-8fb3-4362-9896-9f246f095413"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "d9cf9c5d-5806-46b4-b8f1-cdebfba28422",
+  "title": "Pablo's sculptures draw photographers to paint pottery prints, collages, murals, sketches, and exhibits.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "68b778db-2523-4525-8437-6aa9b7d5f62e"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "6b453532-a9c4-48bf-9cb4-407c95eec1cc",
+  "title": "Randy's musical hobby taught people interesting new genres.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "97a41d86-5a83-490a-a39d-5b65c26d5571"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "7f6cc4d8-08d9-4d78-bcfd-520464ab82ef",
+  "title": "Big cats prefer green apples, however, only ripe red ones are crunchy.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "75d5d6c4-435d-4c8b-9027-b2722d7421d2"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "b468e04e-ee4c-4ce0-bb41-214b64845d21",
+  "title": "A Smart Mouse Does Fractions, Decimals, Percentages, Geometry, Algebra, and Equations.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "5578e8a6-ccff-4322-b60a-dfa1fd826750"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "465d246d-96ea-44f8-b5f1-026c40e5f555",
+  "title": "People really care about reducing pollution, recycling, conserving resources, using renewable energy, addressing climate change, preventing deforestation, protecting the ecosystem, and preserving habitats.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "c65a83d0-9f42-4dcc-a938-247f278bd659"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "eb03096d-8b6b-476b-b8c0-36425d196750",
+  "title": "Every body needs vital minerals, protein, and fiber, plus hydration, sleep, exercise, a balanced diet, and vitamins.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "98c16bab-f8e8-4552-96eb-bed02299f877"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "a1fa88ad-4f07-4fcb-a3c7-b65fea5e99d1",
+  "title": "Harry's very magical adventure quickly made legends from myths and fables.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "ae87ba48-dd4a-45f2-b72f-169d172d719a"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "f5b95be0-cf19-417e-9407-4dde5278c512",
+  "title": "Don't rely completely on political parties, vote for your rights and the constitution, and hope the president or prime minister doesn't veto the bill or amendment passed by parliament or congress.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "5f39c97e-1694-43bb-90b0-2b8db6d4f14e"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "fa8213e3-0c80-4a47-bb10-094beec07486",
+  "title": "Can Larry's Elephant Eat Tasty Pineapple, Raisins, Cakes, And Cookies Made Perfectly Right, Creating A Magnificent Cartography Map Key?",
+  "topic": {
+    "$ref": "topics",
+    "$id": "da767801-dc74-4e97-ba39-d7a8b340eba0"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "584e61b8-e4d7-4f27-90bc-adaa4965e811",
+  "title": "Fiona never played poker professionally because she's bad at holding cards, but many folks still think her poker skills have potential.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "ceb1c233-1f17-4070-bb38-d5a409a50a10"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "f096c1ef-fa3a-4d6e-a0f7-572629c4618c",
+  "title": "A clever monkey hides in plain sight, making haste to avoid predators and find food in a diverse ecosystem.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "031dca38-03a4-45e5-a913-02ba9adc44e2"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "a75be473-906b-4a06-8269-6ea2b05f2573",
+  "title": "The elephant ate a cake and ice cream, then played cards under the moonlight.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "214dd126-0bbd-444b-bbd1-c7a277d5fed8"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "7d0d4fce-d8e8-4bf7-ae1c-06dfb6bfad53",
+  "title": "Every Friday, Sarah's brother Sam competes in a marathon, training with his coach to improve his endurance, flexibility, strength, balance, agility, coordination, teamwork, and strategy, while also focusing on his stamina through consistent practice, warm-up and cool-down routines, and utilizing the best equipment.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "7ce0121b-2b0b-45b0-86bc-3de090458c46"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "1b16ef13-14f9-4e72-a725-575231bc5f58",
+  "title": "Can Tom really cook and bake a huge apple pie for Rachel's birthday, despite very diverse cultural beliefs and values?",
+  "topic": {
+    "$ref": "topics",
+    "$id": "18decd4b-81ec-49bc-a236-07a895682375"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "e8a1c2a6-136c-4419-b2fd-232d1f35b7cf",
+  "title": "My teacher has prepared a forecast for the climate, including meteorology, temperature, humidity, precipitation, air pressure, wind, clouds, and the effects of evaporation, condensation, global warming, ozone layer, and greenhouse effect on the atmosphere.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "796075c1-0955-4524-bd3d-e528798b1309"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "c7c45dae-777e-4c75-978a-798659d64cf6",
+  "title": "Some Men Only Need Certain Resources Daily, Including Extraordinary Senses, Cells, Growth.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "7e17ca3e-3b1d-4200-a564-fa94bd01bce8"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "8d82aeed-4378-4521-97c8-ff6c0a9400c3",
+  "title": "Some Great Universe Minds Plan A Cosmic Mission Beyond Our Solar System, Collecting Meteors, Comets, And Black Holes, Guided By Gravity, Orbiting Around The Milky Way, With Space Probes, Stations, And Satellites.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "beb41e37-edf7-4459-8125-844a15cc73fd"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "ad3b0653-495b-4617-94fc-670b3fe27121",
+  "title": "My Elephant Goes Running Past In China, Making Inca And Aztec Pyramids Tremble, Hoping Ruins And Artifacts Reveal Hieroglyphics.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "8d366fda-ff1f-4b28-aa6b-26769305b8ab"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "9bae1772-45f2-4495-b5a0-ff12bf93dd8e",
+  "title": "Every violent event triggers fear, dread, and horror, as life is endangered by nature's wrath.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "cb7b3249-1dc3-430c-a80d-c54f4f919a59"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "c3b54715-032b-47d4-9074-39c6d9a5b725",
+  "title": "Randy rabbits eat ice cream with waffles, causing indigestion, riots, and global treaties.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "db3f1585-c564-4dda-ae94-cf688a1bd07e"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "4247a520-8ccd-4f6d-b613-6ae48f7ee52c",
+  "title": "Please pass grandma some really fresh veggies so she can cook healthy food promptly.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "07569d4d-f9ed-4842-8633-0a5f1895011b"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "4c807bba-bdab-4641-b81d-c7a8eb32c217",
+  "title": "Can Bob Save Debt Credit Interest Taxes In Expenses, Invest Profits, Lose Money, Bank Accounts, Checks, and Financial Planning?",
+  "topic": {
+    "$ref": "topics",
+    "$id": "80e1f5ec-a13d-4b1e-9f63-9040175f59fa"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "aedd512f-4877-494d-9795-6a9f0cd27e64",
+  "title": "Criminals punish, trials have juries and judges, defendants and plaintiffs give testimony, verdicts determine guilt or innocence, appeals consider evidence and law enforcement must respect rights.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "811db5d4-1cd1-46c0-a483-03b29d8d372e"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "e3ee23e0-9935-4405-aa1f-c1cfcd4f6299",
+  "title": "Blueprints for foundations frame the roof, walls, ceiling, and floors with windows and doors, supported by columns, arches, domes, and towers, all built with various styles and materials.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "e2de806b-9709-4ffe-b5d1-8d2ece47bcf9"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "12cab38c-486e-4883-9760-e2efc176a48f",
+  "title": "Never eat nasty expired meat, especially Monday mornings.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "3ebb1f71-0204-4630-bc3b-126d1e4dd673"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "aaca6fff-2f03-4cd0-b442-d9d635c08422",
+  "title": "Randy's carpool reduced carbon footprint, reused bags for recycling and composting, and supported renewable energy to combat pollution and deforestation. He also volunteered for reforestation and conservation efforts to protect habitats and endangered species from extinction, all in the name of sustainability and fighting climate change.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "e4f8f63b-f828-4e1f-ad44-59b2ad76b6e9"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "2f8bdf5a-39ef-4843-a875-563a558db710",
+  "title": "Some elephants take many big, powerful leaps, running down icy roads in Antarctica.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "85baecbf-dbe5-435c-8938-f5d979b4db41"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "9ad0ce47-9818-4a7b-a7ae-a6b755d90ee9",
+  "title": "Randy's big red nose never really impressed Emily, causing sudden panic and anxiety, creating some pretty abstract minimalist contemporary modern art.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "8b34bb35-739a-4668-b1f5-7f1b51d76ff7"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "ca277976-df21-4052-91bf-504d17f6e18d",
+  "title": "FREDJOTODIPERSPOREMRSMI - \"Fred jot odi perspore Mrs. Mi\"",
+  "topic": {
+    "$ref": "topics",
+    "$id": "9e1d6561-0f18-4000-8226-0ba6f01193f1"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "9cd6d993-dd01-4fe1-a04c-cbc9864cbc49",
+  "title": "Poor Inequality Hungers for Education, Gender Equality, Clean Water, Sanitation, Climate Change, Energy, Economic Growth, Infrastructure, Peace, Justice, and Sustainable Development.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "2b23a243-d23c-400d-a6bf-42c476ac3838"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "a66aac55-fcee-404f-a0ed-ddce9e7da0df",
+  "title": "The Amazing Leaders Never Cease Being Great In Science, Technology, and Innovation - Thomas Edison, Alexander Graham Bell, Leonardo da Vinci, Nikola Tesla, Marie Curie, Ada Lovelace, Galileo Galilei, Isaac Newton, Albert Einstein, Steve Jobs, Tim Berners-Lee, James Watt, Benjamin Franklin, Charles Babbage, George Washington Carver.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "9be1cdda-ee11-4e29-a5d5-894857b1fc2a"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "17bc1758-c53a-4b6e-b977-590389931fb3",
+  "title": "Great Romans eat noodles, just like Chinese, Japanese, and Celts, while Native Americans and Africans tell tales of gods, goddesses, heroes, myths, legends, and folklore.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "2aa113ee-6ccd-4444-9d36-22a409667e02"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "352eb5db-bbba-4adb-bca8-e0a32d35481c",
+  "title": "Christopher Columbus, Vasco da Gama, Ferdinand Magellan, Marco Polo, Sir Francis Drake, Captain James Cook, Amerigo Vespucci, Hernán Cortés, Lewis and Clark, Sacagawea, Roald Amundsen, Neil Armstrong, Edmund Hillary, Tenzing Norgay, Sally Ride - Can Very Fine Men Create Amazing Voyages, Having Courage, Luck, Strength, and Endurance Today?",
+  "topic": {
+    "$ref": "topics",
+    "$id": "d8087f4a-bc98-4695-8e8a-620b4219e315"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "ad050df5-dc6c-4c13-999f-e05faa26163d",
+  "title": "Astronomers Invented Great Machines, Creating Theories, Just Read Science Articles, Scientists Can Always Learn And Explore.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "80b863fe-5ca4-49a9-ac3a-82422e41e9cb"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "ab4fcb44-0423-4746-b2ae-ca6089d847a2",
+  "title": "Can I have hot buttered toast, jam, syrup, cream and jelly please?",
+  "topic": {
+    "$ref": "topics",
+    "$id": "819d699b-2007-4b91-87ef-6a728573bf9f"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "d89e76f8-bceb-400e-a464-a6c1ab7e6874",
+  "title": "Can People See All Fish, Crustaceans, Mollusks, Cetaceans, Sharks, Rays, Sea Turtles, Jellyfish, Octopus, Squid, Marine Mammals, and Deep Sea Creatures in Coral Reefs with Plankton and Algae?",
+  "topic": {
+    "$ref": "topics",
+    "$id": "656c1aea-4975-4cc5-bca8-64b02349d409"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "1bc5a881-0d08-438a-81e8-a1e848b62ebc",
+  "title": "Don't let the eager ants play cards for very juicy jams.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "b59e7a1f-b175-41b6-be32-73202a4ad1e5"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "a4124c1f-d002-4f13-9533-ad53b7fe9f40",
+  "title": "Every morning, Emily likes apples, especially sour ones, so Uncle Ralph eats fried dumplings, drinks tea, and dances.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "32385297-8563-4472-893d-a4f092603c49"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "6ce8c404-f91c-4d48-9190-c1120ccedbe8",
+  "title": "Can Rachel's New Dog Eat Every Ice Cream Sundae In Sally's Giant Orange Tent, Making Gooey S'mores?",
+  "topic": {
+    "$ref": "topics",
+    "$id": "68196c8b-db47-47d3-af5a-2e420012a8d6"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "157348a1-efe9-4aa2-b6b1-4d95fd68efe8",
+  "title": "I'm making tasty recipes, carefully measuring ingredients, using various cooking techniques like baking, frying, grilling, steaming, sautéing, and roasting, and adding seasoning and garnishing for a beautiful plating and presentation.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "1507f28b-db91-46b9-833f-2fd296c7a356"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "ffb45072-338c-4faf-94e0-d13200e33d79",
+  "title": "Benny's startup innovated marketing, sales, and customer service management for finance and product development, with market research, branding, and advertising to beat the competition and minimize risk, resulting in high revenue and profit.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "9180871e-c749-4b4a-a872-c7dbc6024949"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "5607a650-de79-43a3-b03c-94b563403864",
+  "title": "Can Ned Quickly Purchase Some White Black Red Stars, Darkly Observed, Creating Light-Powered Astronomical Units.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "d184d215-fadc-46bb-a53f-26ce4e61bd6d"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "81800549-0388-4e3d-bf9f-1d87ed9af636",
+  "title": "Great minds often have cool science, very good geeks always have powerful brains.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "f2d633b8-f2d9-48bb-b9e0-96048d45553f"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "d91e696c-e0a3-4cbc-8a74-62b650813c07",
+  "title": "Please provide kings, queens, and emperors, chancellors, governors, senators, representatives, diplomats, activists, revolutionaries, generals, philosophers, and historians to meet with the presidents and prime ministers.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "cf23c648-7d64-41ca-920e-f6baa628b29f"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "8e71d3fe-e1d2-4060-b708-ddd16d9a9001",
+  "title": "AIMEE's DARN PACS are programming ethics, privacy, security, artificial intelligence, machine learning, deep learning, neural networks, robotics, automation, algorithms, sensors, natural language processing, and computer vision.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "ce37f8fc-b91f-42d1-954a-b502420ca504"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "1e9fbfd5-b0c6-4e09-877f-1fc38601f444",
+  "title": "Some Distinguished Dogs Really Prefer Just Chasing Leaders, Speaking Loudly, and Ignoring Supreme Court Cases In Favor of Equality.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "ed0b3855-1e50-45b3-be12-4025f17b99c1"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "ef7defc0-df08-445b-a829-5b7623da3de9",
+  "title": "Nancy's short poetry plays essays, genres, themes, motifs, symbolism, irony, satire, allegory, tragedy, comedy, drama, romance, and literary devices were all written by an author.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "c79cf349-9dd9-40f5-ac22-a7376e4136e9"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "6d63aecb-8cc1-46b7-850b-7a6b4cb6095e",
+  "title": "Can Bob see developmental personality and clinical neuropsychology motivate emotional perception, intelligence, memory, and learning through cognitive, behavioral, social therapy?",
+  "topic": {
+    "$ref": "topics",
+    "$id": "9e0656dd-2cf8-48e9-a254-d318ea8191fb"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "607830c2-7719-4d2a-8209-b0d45bf87204",
+  "title": "Randy's musical heart dances to the tune of jazz, blues, rock, pop, country, hip hop, electronic, and world genres, with classical instruments that create a unique rhythm, melody, harmony, dynamics, tempo, and timbre.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "b591ae3d-6ed6-4f60-8013-4710e9f862b1"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "aa9d15fa-0279-4ea5-96f7-bed3a6fc6de3",
+  "title": "My teacher eagerly explains mechanics, thermodynamics, electromagnetism, optics, relativity, quantum mechanics, nuclear physics, particle physics, cosmology, force, energy, matter, motion, waves, and fields.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "ecbe1413-7985-4bdf-8dac-155236089c9c"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "fcf62201-6b9c-4f87-bb40-f12656c597e4",
+  "title": "My teacher eagerly explains mechanics, thermodynamics, optics, relativity, quantum mechanics, nuclear physics, particle physics, cosmology, force, energy, matter, motion, waves, and fields.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "cc270170-fafc-41fa-9660-9341e50f8c15"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "d3afeab7-1aa3-4d05-aa37-9fec9afc91f9",
+  "title": "Every chemist makes amazing atomic inventions, but periodic organic analysis proves biochemistry's thermo-electro-physical bonding.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "121bdd69-8a57-4b6c-b7c1-0338a922c896"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "15794504-afba-4dbe-9ea5-6dddfc9d3f75",
+  "title": "GEE, PATTY, MICHAEL, BOB, ZACK, ICEMAN, NINA, BEN, ZOE, IAN, CASSIE, MOLLY, BILLY, NED, and CONNIE all studied biology.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "c0acb65b-e8a2-42d9-9e76-63cbc46dceb7"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "fe41eafe-8674-4361-a780-8a414ee35f9b",
+  "title": "All good girls try calculus, never to overlook probability, statistics, combinatorics, graph theory, mathematical logic, differential equations, optimization, cryptography, and fractals.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "c916bb21-2810-45c2-aab5-1f9fadf2adea"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "a68405af-15d4-45b4-bc7f-78f50d94f415",
+  "title": "Some People Don't Mind Creating Excellent Scenes Like Set Designers, Costume Makers, And Directors Producing Great Genres.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "ca8f59ad-303c-4300-ae44-f29f72953477"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "ea50bef0-b62f-4b11-8ece-457bfcfde665",
+  "title": "Every hippopotamus has big purple claws, grabbing only red grapes, green apples, and zesty oranges, saving resources while watching the world's health.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "c150559f-dbd1-4583-958c-9aacbb01c57e"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "db7cb790-d46c-445d-bec1-ca90e0c52442",
+  "title": "People generally don't argue about cats and dogs, but can't agree on political beliefs.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "54e789af-f7e4-4a45-ac86-394ae1a56832"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+},
+{
+  "_id": "d7660d6b-99be-4abe-9a90-4d881b783803",
+  "title": "Every cat deserves very rare, moral justice.",
+  "topic": {
+    "$ref": "topics",
+    "$id": "e2abf6f0-b92f-4e3c-87c8-657565a8bed8"
+  },
+  "_class": "org.example.backend.entity.Conversation"
+}]

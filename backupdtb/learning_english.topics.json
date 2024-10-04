@@ -1,0 +1,700 @@
+[{
+  "_id": "22413226-260c-420c-a4d8-833d6e9ab323",
+  "title": "Alphabet",
+  "ageGroupId": "6237bcca-c17f-41aa-8ec7-61b522bfef47",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "53437c27-b4d1-4512-94cd-092a371e8bf4",
+  "title": "Numbers",
+  "ageGroupId": "6237bcca-c17f-41aa-8ec7-61b522bfef47",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "f2ea2dbe-cd38-42d9-8672-e41f0e0e75fb",
+  "title": "Colors",
+  "ageGroupId": "6237bcca-c17f-41aa-8ec7-61b522bfef47",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "6ef4f178-1664-4ec6-95fc-54ca7cd8b512",
+  "title": "Shapes",
+  "ageGroupId": "6237bcca-c17f-41aa-8ec7-61b522bfef47",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "13f82839-69fb-47c6-8e23-45700b8f3f03",
+  "title": "Animals",
+  "ageGroupId": "6237bcca-c17f-41aa-8ec7-61b522bfef47",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "92d0a89d-c35b-4054-845c-6855ff6fee55",
+  "title": "Family",
+  "ageGroupId": "6237bcca-c17f-41aa-8ec7-61b522bfef47",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "2db4b5d4-957c-4bf6-9d45-e592a40a41b1",
+  "title": "Food",
+  "ageGroupId": "6237bcca-c17f-41aa-8ec7-61b522bfef47",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "af89c03a-055d-471b-a1d8-255733498bd6",
+  "title": "Body Parts",
+  "ageGroupId": "6237bcca-c17f-41aa-8ec7-61b522bfef47",
+  "favourite": true,
+  "_class": "org.example.backend.entity.Topic"
+},
+{
+  "_id": "7c5852d0-d287-431e-9b39-3d7c5550448d",
+  "title": "Clothes",
+  "ageGroupId": "6237bcca-c17f-41aa-8ec7-61b522bfef47",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": true
+},
+{
+  "_id": "471bd98a-d66e-4ed6-9267-0ddf63f7db66",
+  "title": "Weather",
+  "ageGroupId": "6237bcca-c17f-41aa-8ec7-61b522bfef47",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "426f8de9-1cc0-4631-a60f-ab53deb3fd96",
+  "title": "Daily Routines",
+  "ageGroupId": "4e42da56-629a-4ef1-b593-5a5550209365",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "34835a49-1984-46f6-b877-8289c4b032bf",
+  "title": "Fruits",
+  "ageGroupId": "4e42da56-629a-4ef1-b593-5a5550209365",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "bfb15f9d-2793-46bf-b831-94f87695f81f",
+  "title": "Vegetables",
+  "ageGroupId": "4e42da56-629a-4ef1-b593-5a5550209365",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "a0a3a5cc-7b77-439f-a095-858384cd8572",
+  "title": "Transport",
+  "ageGroupId": "4e42da56-629a-4ef1-b593-5a5550209365",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "c4362b85-e660-4198-a3d3-3a4e6e2264c0",
+  "title": "Opposites",
+  "ageGroupId": "4e42da56-629a-4ef1-b593-5a5550209365",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": true
+},
+{
+  "_id": "218ef77a-9937-4f36-bcb4-eb777a70e3e7",
+  "title": "Seasons",
+  "ageGroupId": "4e42da56-629a-4ef1-b593-5a5550209365",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "414c29cc-e183-4caa-b4dd-e21f98f89adc",
+  "title": "Places",
+  "ageGroupId": "4e42da56-629a-4ef1-b593-5a5550209365",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "3d13ba9e-b1f1-4ea7-8d83-8fb5abfbd85c",
+  "title": "Actions",
+  "ageGroupId": "4e42da56-629a-4ef1-b593-5a5550209365",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "edc50d3b-7001-4cd6-8d81-d2192a5fff28",
+  "title": "Emotions",
+  "ageGroupId": "4e42da56-629a-4ef1-b593-5a5550209365",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "64cb51d6-35ea-4c5d-93c1-280177c83b3b",
+  "title": "Toys",
+  "ageGroupId": "4e42da56-629a-4ef1-b593-5a5550209365",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "9faba3e1-a9d9-445c-99d1-70f9eae43f8b",
+  "title": "Nature",
+  "ageGroupId": "7dce5407-c6ff-4a24-886d-73d3fc06b8d0",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "509ef4a1-9308-4b97-8627-55cf1c4347b5",
+  "title": "Days of Week",
+  "ageGroupId": "7dce5407-c6ff-4a24-886d-73d3fc06b8d0",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "ec57eea4-b512-4ed3-91e7-2603f278639b",
+  "title": "Months",
+  "ageGroupId": "7dce5407-c6ff-4a24-886d-73d3fc06b8d0",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "70b3e569-6c69-4395-a4fb-1ff7d58ca3b2",
+  "title": "Time",
+  "ageGroupId": "7dce5407-c6ff-4a24-886d-73d3fc06b8d0",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": true
+},
+{
+  "_id": "02151fef-c142-4f40-9071-7a440ea10043",
+  "title": "School",
+  "ageGroupId": "7dce5407-c6ff-4a24-886d-73d3fc06b8d0",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "e82e6d90-0027-40a4-a25f-334aac8f975f",
+  "title": "House",
+  "ageGroupId": "7dce5407-c6ff-4a24-886d-73d3fc06b8d0",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "a28b6372-0c0c-429f-a9f5-8488563f899a",
+  "title": "Occupations",
+  "ageGroupId": "7dce5407-c6ff-4a24-886d-73d3fc06b8d0",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "62cc348c-d774-408c-bcc8-a00b65c08628",
+  "title": "In the City",
+  "ageGroupId": "7dce5407-c6ff-4a24-886d-73d3fc06b8d0",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "0486d450-d510-4e9a-93b6-70398b148439",
+  "title": "At the Beach",
+  "ageGroupId": "7dce5407-c6ff-4a24-886d-73d3fc06b8d0",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "a5a621f2-adf0-4de3-b0a9-5fa4941f1f08",
+  "title": "Hobbies",
+  "ageGroupId": "b13aa2a6-22c6-4529-a475-6e7f1eed116d",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": true
+},
+{
+  "_id": "be1aeda3-5e66-4427-bf85-f47f1a94cbc6",
+  "title": "Sports",
+  "ageGroupId": "b13aa2a6-22c6-4529-a475-6e7f1eed116d",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": true
+},
+{
+  "_id": "a2c340e2-8f42-4c56-a09a-d7cb598ad371",
+  "title": "Space",
+  "ageGroupId": "b13aa2a6-22c6-4529-a475-6e7f1eed116d",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "5e93be22-12b9-46b8-b9b0-0db16d36707f",
+  "title": "Weather Phenomena",
+  "ageGroupId": "b13aa2a6-22c6-4529-a475-6e7f1eed116d",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": true
+},
+{
+  "_id": "6fa96ec2-8687-48bb-b85f-67789c095b0a",
+  "title": "Animals & Habitats",
+  "ageGroupId": "b13aa2a6-22c6-4529-a475-6e7f1eed116d",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "60457d22-c4da-4f84-8788-12be324f9c84",
+  "title": "Technology",
+  "ageGroupId": "b13aa2a6-22c6-4529-a475-6e7f1eed116d",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "5ef4c2e9-4125-48a1-9a84-3565bec9d4ac",
+  "title": "Travel",
+  "ageGroupId": "b13aa2a6-22c6-4529-a475-6e7f1eed116d",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "11455d9c-b84a-4560-8d2b-e8bdb2da7187",
+  "title": "Holidays",
+  "ageGroupId": "b13aa2a6-22c6-4529-a475-6e7f1eed116d",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "364847d7-635e-42b8-958c-ad8f012ce96f",
+  "title": "Measurements",
+  "ageGroupId": "b13aa2a6-22c6-4529-a475-6e7f1eed116d",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "95e7467a-0bdf-419e-9cf1-9cf504ec1f93",
+  "title": "Community Helpers",
+  "ageGroupId": "b13aa2a6-22c6-4529-a475-6e7f1eed116d",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "1600d8db-6331-4855-bfcd-cb33ac9f529e",
+  "title": "Landforms",
+  "ageGroupId": "fdc22d8d-5324-4e67-8a10-d29680c97749",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": true
+},
+{
+  "_id": "73b9ab40-89f8-4a43-95dd-114c5693814c",
+  "title": "Countries & Cities",
+  "ageGroupId": "fdc22d8d-5324-4e67-8a10-d29680c97749",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "47d1bbb6-8fb3-4362-9896-9f246f095413",
+  "title": "History",
+  "ageGroupId": "fdc22d8d-5324-4e67-8a10-d29680c97749",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "68b778db-2523-4525-8437-6aa9b7d5f62e",
+  "title": "Art",
+  "ageGroupId": "fdc22d8d-5324-4e67-8a10-d29680c97749",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "97a41d86-5a83-490a-a39d-5b65c26d5571",
+  "title": "Music",
+  "ageGroupId": "fdc22d8d-5324-4e67-8a10-d29680c97749",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "75d5d6c4-435d-4c8b-9027-b2722d7421d2",
+  "title": "Science",
+  "ageGroupId": "fdc22d8d-5324-4e67-8a10-d29680c97749",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "5578e8a6-ccff-4322-b60a-dfa1fd826750",
+  "title": "Math",
+  "ageGroupId": "fdc22d8d-5324-4e67-8a10-d29680c97749",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "c65a83d0-9f42-4dcc-a938-247f278bd659",
+  "title": "Environment",
+  "ageGroupId": "fdc22d8d-5324-4e67-8a10-d29680c97749",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "98c16bab-f8e8-4552-96eb-bed02299f877",
+  "title": "Health & Nutrition",
+  "ageGroupId": "fdc22d8d-5324-4e67-8a10-d29680c97749",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "ae87ba48-dd4a-45f2-b72f-169d172d719a",
+  "title": "Fairy Tales & Myths",
+  "ageGroupId": "fdc22d8d-5324-4e67-8a10-d29680c97749",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": true
+},
+{
+  "_id": "5f39c97e-1694-43bb-90b0-2b8db6d4f14e",
+  "title": "Government & Politics",
+  "ageGroupId": "ab83303d-4d59-444d-b878-538f05dbd04b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "da767801-dc74-4e97-ba39-d7a8b340eba0",
+  "title": "Geography",
+  "ageGroupId": "ab83303d-4d59-444d-b878-538f05dbd04b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "ceb1c233-1f17-4070-bb38-d5a409a50a10",
+  "title": "Literature",
+  "ageGroupId": "ab83303d-4d59-444d-b878-538f05dbd04b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "031dca38-03a4-45e5-a913-02ba9adc44e2",
+  "title": "Nature & Wildlife",
+  "ageGroupId": "ab83303d-4d59-444d-b878-538f05dbd04b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "214dd126-0bbd-444b-bbd1-c7a277d5fed8",
+  "title": "Inventions & Innovations",
+  "ageGroupId": "ab83303d-4d59-444d-b878-538f05dbd04b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "7ce0121b-2b0b-45b0-86bc-3de090458c46",
+  "title": "Sports & Fitness",
+  "ageGroupId": "ab83303d-4d59-444d-b878-538f05dbd04b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "18decd4b-81ec-49bc-a236-07a895682375",
+  "title": "World Cultures",
+  "ageGroupId": "ab83303d-4d59-444d-b878-538f05dbd04b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "796075c1-0955-4524-bd3d-e528798b1309",
+  "title": "Weather & Climate",
+  "ageGroupId": "ab83303d-4d59-444d-b878-538f05dbd04b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "7e17ca3e-3b1d-4200-a564-fa94bd01bce8",
+  "title": "Human Body",
+  "ageGroupId": "ab83303d-4d59-444d-b878-538f05dbd04b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": true
+},
+{
+  "_id": "beb41e37-edf7-4459-8125-844a15cc73fd",
+  "title": "Outer Space",
+  "ageGroupId": "ab83303d-4d59-444d-b878-538f05dbd04b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "8d366fda-ff1f-4b28-aa6b-26769305b8ab",
+  "title": "Ancient Civilizations",
+  "ageGroupId": "f197c86b-76be-4688-8685-75e75e76a857",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "cb7b3249-1dc3-430c-a80d-c54f4f919a59",
+  "title": "Natural Disasters",
+  "ageGroupId": "f197c86b-76be-4688-8685-75e75e76a857",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "db3f1585-c564-4dda-ae94-cf688a1bd07e",
+  "title": "World History",
+  "ageGroupId": "f197c86b-76be-4688-8685-75e75e76a857",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": true
+},
+{
+  "_id": "07569d4d-f9ed-4842-8633-0a5f1895011b",
+  "title": "Plants & Gardening",
+  "ageGroupId": "f197c86b-76be-4688-8685-75e75e76a857",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "80e1f5ec-a13d-4b1e-9f63-9040175f59fa",
+  "title": "Financial Literacy",
+  "ageGroupId": "f197c86b-76be-4688-8685-75e75e76a857",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "811db5d4-1cd1-46c0-a483-03b29d8d372e",
+  "title": "Law & Justice",
+  "ageGroupId": "f197c86b-76be-4688-8685-75e75e76a857",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "e2de806b-9709-4ffe-b5d1-8d2ece47bcf9",
+  "title": "Architecture",
+  "ageGroupId": "f197c86b-76be-4688-8685-75e75e76a857",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "3ebb1f71-0204-4630-bc3b-126d1e4dd673",
+  "title": "Health & Wellness",
+  "ageGroupId": "f197c86b-76be-4688-8685-75e75e76a857",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "e4f8f63b-f828-4e1f-ad44-59b2ad76b6e9",
+  "title": "Ecology & Conservation",
+  "ageGroupId": "f197c86b-76be-4688-8685-75e75e76a857",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "85baecbf-dbe5-435c-8938-f5d979b4db41",
+  "title": "STEM Careers",
+  "ageGroupId": "f197c86b-76be-4688-8685-75e75e76a857",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "8b34bb35-739a-4668-b1f5-7f1b51d76ff7",
+  "title": "Art Movements",
+  "ageGroupId": "5a7e263f-0cdd-4fc4-a037-38fe28b44e4f",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "9e1d6561-0f18-4000-8226-0ba6f01193f1",
+  "title": "Human Rights",
+  "ageGroupId": "5a7e263f-0cdd-4fc4-a037-38fe28b44e4f",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "2b23a243-d23c-400d-a6bf-42c476ac3838",
+  "title": "Global Issues",
+  "ageGroupId": "5a7e263f-0cdd-4fc4-a037-38fe28b44e4f",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "9be1cdda-ee11-4e29-a5d5-894857b1fc2a",
+  "title": "Famous Inventors",
+  "ageGroupId": "5a7e263f-0cdd-4fc4-a037-38fe28b44e4f",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "2aa113ee-6ccd-4444-9d36-22a409667e02",
+  "title": "Mythology",
+  "ageGroupId": "5a7e263f-0cdd-4fc4-a037-38fe28b44e4f",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": true
+},
+{
+  "_id": "d8087f4a-bc98-4695-8e8a-620b4219e315",
+  "title": "Great Explorers",
+  "ageGroupId": "5a7e263f-0cdd-4fc4-a037-38fe28b44e4f",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "80b863fe-5ca4-49a9-ac3a-82422e41e9cb",
+  "title": "Famous Scientists",
+  "ageGroupId": "5a7e263f-0cdd-4fc4-a037-38fe28b44e4f",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "819d699b-2007-4b91-87ef-6a728573bf9f",
+  "title": "World Religions",
+  "ageGroupId": "5a7e263f-0cdd-4fc4-a037-38fe28b44e4f",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "656c1aea-4975-4cc5-bca8-64b02349d409",
+  "title": "Ocean Life",
+  "ageGroupId": "5a7e263f-0cdd-4fc4-a037-38fe28b44e4f",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": true
+},
+{
+  "_id": "b59e7a1f-b175-41b6-be32-73202a4ad1e5",
+  "title": "Careers",
+  "ageGroupId": "5a7e263f-0cdd-4fc4-a037-38fe28b44e4f",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "32385297-8563-4472-893d-a4f092603c49",
+  "title": "Philosophy",
+  "ageGroupId": "d5ec43ae-148a-4501-a2ea-29766a5ce449",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "68196c8b-db47-47d3-af5a-2e420012a8d6",
+  "title": "Human Anatomy",
+  "ageGroupId": "d5ec43ae-148a-4501-a2ea-29766a5ce449",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "1507f28b-db91-46b9-833f-2fd296c7a356",
+  "title": "Culinary Arts",
+  "ageGroupId": "d5ec43ae-148a-4501-a2ea-29766a5ce449",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "9180871e-c749-4b4a-a872-c7dbc6024949",
+  "title": "Entrepreneurship",
+  "ageGroupId": "d5ec43ae-148a-4501-a2ea-29766a5ce449",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "d184d215-fadc-46bb-a53f-26ce4e61bd6d",
+  "title": "Astronomy",
+  "ageGroupId": "d5ec43ae-148a-4501-a2ea-29766a5ce449",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": true
+},
+{
+  "_id": "f2d633b8-f2d9-48bb-b9e0-96048d45553f",
+  "title": "Earth Science",
+  "ageGroupId": "d5ec43ae-148a-4501-a2ea-29766a5ce449",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "cf23c648-7d64-41ca-920e-f6baa628b29f",
+  "title": "World Leaders",
+  "ageGroupId": "d5ec43ae-148a-4501-a2ea-29766a5ce449",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "ce37f8fc-b91f-42d1-954a-b502420ca504",
+  "title": "Robotics & AI",
+  "ageGroupId": "d5ec43ae-148a-4501-a2ea-29766a5ce449",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "ed0b3855-1e50-45b3-be12-4025f17b99c1",
+  "title": "Civil Rights Movement",
+  "ageGroupId": "d5ec43ae-148a-4501-a2ea-29766a5ce449",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "c79cf349-9dd9-40f5-ac22-a7376e4136e9",
+  "title": "World Literature",
+  "ageGroupId": "d5ec43ae-148a-4501-a2ea-29766a5ce449",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "9e0656dd-2cf8-48e9-a254-d318ea8191fb",
+  "title": "Psychology",
+  "ageGroupId": "ef6f2795-b4b7-493d-9c0f-ac1b417d494b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "b591ae3d-6ed6-4f60-8013-4710e9f862b1",
+  "title": "Musics",
+  "ageGroupId": "ef6f2795-b4b7-493d-9c0f-ac1b417d494b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "ecbe1413-7985-4bdf-8dac-155236089c9c",
+  "title": "Physic",
+  "ageGroupId": "ef6f2795-b4b7-493d-9c0f-ac1b417d494b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "cc270170-fafc-41fa-9660-9341e50f8c15",
+  "title": "Physics",
+  "ageGroupId": "ef6f2795-b4b7-493d-9c0f-ac1b417d494b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": true
+},
+{
+  "_id": "121bdd69-8a57-4b6c-b7c1-0338a922c896",
+  "title": "Chemistry",
+  "ageGroupId": "ef6f2795-b4b7-493d-9c0f-ac1b417d494b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "c0acb65b-e8a2-42d9-9e76-63cbc46dceb7",
+  "title": "Biology",
+  "ageGroupId": "ef6f2795-b4b7-493d-9c0f-ac1b417d494b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "c916bb21-2810-45c2-aab5-1f9fadf2adea",
+  "title": "Mathematics",
+  "ageGroupId": "ef6f2795-b4b7-493d-9c0f-ac1b417d494b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "ca8f59ad-303c-4300-ae44-f29f72953477",
+  "title": "Film & Theater",
+  "ageGroupId": "ef6f2795-b4b7-493d-9c0f-ac1b417d494b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "c150559f-dbd1-4583-958c-9aacbb01c57e",
+  "title": "Environmental Science",
+  "ageGroupId": "ef6f2795-b4b7-493d-9c0f-ac1b417d494b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "54e789af-f7e4-4a45-ac86-394ae1a56832",
+  "title": "Political Science",
+  "ageGroupId": "ef6f2795-b4b7-493d-9c0f-ac1b417d494b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+},
+{
+  "_id": "e2abf6f0-b92f-4e3c-87c8-657565a8bed8",
+  "title": "Ethics & Morality",
+  "ageGroupId": "ef6f2795-b4b7-493d-9c0f-ac1b417d494b",
+  "_class": "org.example.backend.entity.Topic",
+  "favourite": false
+}]

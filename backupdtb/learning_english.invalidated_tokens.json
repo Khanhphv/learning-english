@@ -1,0 +1,1176 @@
+[{
+  "_id": "ce8dd518-d337-48e3-8f32-2718a98adcda",
+  "expiryDate": {
+    "$date": "2024-10-03T05:17:46.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "857a6022-e4c0-4c30-adf9-ad852f3e396c",
+  "expiryDate": {
+    "$date": "2024-10-03T05:20:55.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "13c50c14-408f-4afa-91e1-65e5a3311739",
+  "expiryDate": {
+    "$date": "2024-10-03T05:33:06.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "0e8eb3a2-72c2-4845-8a4f-75df759eaf2f",
+  "expiryDate": {
+    "$date": "2024-10-03T05:33:24.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "3fbedc7e-3cc3-4fdf-b9c7-3882d3ec7c19",
+  "expiryDate": {
+    "$date": "2024-10-03T05:38:41.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "f85f9234-57f3-4ecc-838f-0fa9a3e89505",
+  "expiryDate": {
+    "$date": "2024-10-03T05:39:04.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "cf8e5c02-9214-4bde-9e5c-97e2764ec202",
+  "expiryDate": {
+    "$date": "2024-10-03T05:39:20.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "4a8df893-b8b5-4765-ac76-8b60b29536b0",
+  "expiryDate": {
+    "$date": "2024-10-03T05:39:26.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "6f3da310-bdda-4673-b164-21442bac9555",
+  "expiryDate": {
+    "$date": "2024-10-03T05:39:55.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "7efacdc0-8ebd-4745-9afd-f7b37a6bc18d",
+  "expiryDate": {
+    "$date": "2024-10-03T05:40:30.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "1f3b133d-e010-43d7-a4b4-d32a32a6ebc4",
+  "expiryDate": {
+    "$date": "2024-10-03T05:41:05.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "0fc68e5c-906e-45e1-b39d-b3136467239f",
+  "expiryDate": {
+    "$date": "2024-10-03T05:41:09.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "970e3528-f969-42d2-a2bc-6bfad27e055e",
+  "expiryDate": {
+    "$date": "2024-10-03T05:41:39.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "7078ecf0-eee4-4da1-9281-65b94dfa81d8",
+  "expiryDate": {
+    "$date": "2024-10-03T05:42:01.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "88396879-190c-47ec-866b-a40c1f96d754",
+  "expiryDate": {
+    "$date": "2024-10-03T05:43:34.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "cac3c54f-a2c7-4bb9-a51f-84db86c9ace4",
+  "expiryDate": {
+    "$date": "2024-10-03T05:44:25.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "97bf140c-3e07-4b40-b577-94c5ef7a9434",
+  "expiryDate": {
+    "$date": "2024-10-03T05:45:53.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "d2f7adab-9717-4272-a935-f2cea9b24346",
+  "expiryDate": {
+    "$date": "2024-10-03T05:46:34.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "107631b0-3b4a-4e72-bfd6-6e7ad15c7d95",
+  "expiryDate": {
+    "$date": "2024-10-03T05:48:24.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "fc0d0d42-49aa-4c9a-8394-79514699b683",
+  "expiryDate": {
+    "$date": "2024-10-03T05:55:12.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "618ac39e-74aa-4214-9fd6-bda291d681c7",
+  "expiryDate": {
+    "$date": "2024-10-03T06:05:27.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "2a1bb880-8cbf-4328-902c-66463d3f67d1",
+  "expiryDate": {
+    "$date": "2024-10-03T06:07:49.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "78ab7bd7-80f2-493b-9ed7-c036a254de7c",
+  "expiryDate": {
+    "$date": "2024-10-03T06:08:57.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "92b3feff-d72a-4cdb-a612-433665ff812b",
+  "expiryDate": {
+    "$date": "2024-10-03T06:16:57.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "e5c4c5e9-7b89-4b2a-a178-0b3112d249b5",
+  "expiryDate": {
+    "$date": "2024-10-03T06:17:46.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "c8754963-4dd0-4e35-be81-09c0eecae488",
+  "expiryDate": {
+    "$date": "2024-10-03T06:18:09.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "399bb33b-1c68-481a-b8a0-f4bd1854b4bd",
+  "expiryDate": {
+    "$date": "2024-10-03T06:19:25.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "0b7dcb1d-8752-426a-b72d-514df0f77238",
+  "expiryDate": {
+    "$date": "2024-10-03T06:20:56.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "cf511775-7293-471e-b50e-093038511e7b",
+  "expiryDate": {
+    "$date": "2024-10-03T06:25:36.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "d04a5f5f-5135-4b32-9e5c-5163c35e79eb",
+  "expiryDate": {
+    "$date": "2024-10-03T06:26:47.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "ae452a85-eda8-41a2-96cb-05137f9dcd4e",
+  "expiryDate": {
+    "$date": "2024-10-03T06:46:15.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "9f099171-5fab-4f0a-9691-679c2f970625",
+  "expiryDate": {
+    "$date": "2024-10-03T06:46:40.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "7c87f545-0098-4654-9c87-f257e4a420a3",
+  "expiryDate": {
+    "$date": "2024-10-03T06:47:28.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "ab6c17d9-48ba-4a7e-838a-a2d4b2f88bd5",
+  "expiryDate": {
+    "$date": "2024-10-03T06:47:52.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "cedf1959-a13b-45e4-b6f2-019d63f4b39d",
+  "expiryDate": {
+    "$date": "2024-10-03T06:48:58.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "ed183f39-ab3c-4da6-9a16-3e1df63d2139",
+  "expiryDate": {
+    "$date": "2024-10-03T06:49:21.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "907ee5e4-2e29-4c24-a1d9-c05e0c182f71",
+  "expiryDate": {
+    "$date": "2024-10-03T06:55:54.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "489cd572-4793-4b45-aa91-65a7c0cbff49",
+  "expiryDate": {
+    "$date": "2024-10-03T09:03:18.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "b1a5f2a8-2a5e-4171-b236-1bdefd05d5b3",
+  "expiryDate": {
+    "$date": "2024-10-03T09:06:33.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "79cb7405-5e27-478f-ac2d-05dc5e120a1e",
+  "expiryDate": {
+    "$date": "2024-10-03T09:12:02.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "e5c1e28e-94ef-4c77-bb7d-3eef895249b2",
+  "expiryDate": {
+    "$date": "2024-10-03T09:12:23.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "6270ee62-186f-416c-80e1-80eb35fd9286",
+  "expiryDate": {
+    "$date": "2024-10-03T09:12:50.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "540923cd-b2b3-4dde-8bde-d75053586ba5",
+  "expiryDate": {
+    "$date": "2024-10-03T09:14:46.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "c59014ac-a052-44d6-b658-2819b9a6dbaf",
+  "expiryDate": {
+    "$date": "2024-10-03T09:16:37.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "812cb87f-0986-444e-92c1-a7c68ec2ff6e",
+  "expiryDate": {
+    "$date": "2024-10-03T09:17:08.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "4990b06a-afa2-4956-9ad7-4be0ede473f3",
+  "expiryDate": {
+    "$date": "2024-10-03T09:18:04.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "4e29056d-07f9-4801-b4cb-15d6110a6403",
+  "expiryDate": {
+    "$date": "2024-10-03T09:25:44.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "47bc3dfd-3b7d-47e6-996c-67823d14b7b3",
+  "expiryDate": {
+    "$date": "2024-10-03T09:26:42.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "f6c9e68d-77cc-4dff-a983-be93eea0f44f",
+  "expiryDate": {
+    "$date": "2024-10-03T09:27:34.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "b0eacee5-dcc5-40a8-afd6-ec679ff46d84",
+  "expiryDate": {
+    "$date": "2024-10-03T09:28:19.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "dd5c480f-4704-427d-93c9-1eea2a373a9e",
+  "expiryDate": {
+    "$date": "2024-10-03T09:32:29.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "28af17fc-0a80-4f62-92ba-9d48b437a4b8",
+  "expiryDate": {
+    "$date": "2024-10-03T09:33:49.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "0c6d6c5d-5a8b-4652-b6b5-756e3129ad80",
+  "expiryDate": {
+    "$date": "2024-10-03T09:34:18.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "b57941a0-3920-4cfb-850a-f18e0ac766d9",
+  "expiryDate": {
+    "$date": "2024-10-03T09:34:51.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "46cd589e-00cb-4c9f-b2e7-9563c44505d4",
+  "expiryDate": {
+    "$date": "2024-10-03T09:35:18.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "a45ec481-97c6-4400-953b-36cf2b595307",
+  "expiryDate": {
+    "$date": "2024-10-03T09:36:49.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "04576d9c-7ab8-4b72-892a-51c357474988",
+  "expiryDate": {
+    "$date": "2024-10-03T09:37:42.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "7b19f0af-2aa1-45f1-af40-c79c55b89997",
+  "expiryDate": {
+    "$date": "2024-10-03T09:41:23.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "2034aee3-7d3d-4d03-95f7-bf008d9fe823",
+  "expiryDate": {
+    "$date": "2024-10-03T09:42:44.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "425f4e06-c60e-45df-87c9-0c6ca4c224d6",
+  "expiryDate": {
+    "$date": "2024-10-03T09:47:23.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "d6f07c3f-da64-4296-851a-8efe5ec87015",
+  "expiryDate": {
+    "$date": "2024-10-03T09:51:00.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "38200382-234e-4d45-af9c-9c6d496090f3",
+  "expiryDate": {
+    "$date": "2024-10-03T09:51:51.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "2a9bbc6c-7ca1-4325-9a64-ad50a3fab0d8",
+  "expiryDate": {
+    "$date": "2024-10-03T09:52:11.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "083bc145-6671-45d5-8864-da30dde197b0",
+  "expiryDate": {
+    "$date": "2024-10-03T09:54:52.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "c6e9935b-b43c-49c6-8a44-4fcccb399670",
+  "expiryDate": {
+    "$date": "2024-10-03T09:56:50.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "535d038f-5ec7-4b9e-812f-9973b45189ef",
+  "expiryDate": {
+    "$date": "2024-10-03T09:58:30.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "e2652b28-8543-4a1d-9b3d-e1d9462c6910",
+  "expiryDate": {
+    "$date": "2024-10-03T10:52:32.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "0352ed99-2079-4334-a095-c77ed1c48f19",
+  "expiryDate": {
+    "$date": "2024-10-03T11:04:42.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "036023d8-e3d8-451b-89f9-ac73ecac3622",
+  "expiryDate": {
+    "$date": "2024-10-03T11:15:01.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "228adb3e-8fc0-4164-835f-ddf220529de8",
+  "expiryDate": {
+    "$date": "2024-10-03T11:35:52.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "a96e3d36-4a80-4619-9128-1c1409b62bba",
+  "expiryDate": {
+    "$date": "2024-10-03T11:37:59.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "8902ca9c-837c-4992-966b-89da64e30cd3",
+  "expiryDate": {
+    "$date": "2024-10-03T11:38:44.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "286f7d56-b9db-4d42-bb49-81243f5dbd65",
+  "expiryDate": {
+    "$date": "2024-10-03T11:40:07.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "262f8866-09d6-43e5-847d-3e0fa8148bc5",
+  "expiryDate": {
+    "$date": "2024-10-03T12:21:38.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "7bf7f90c-367a-404e-a4af-f46ddd5b6613",
+  "expiryDate": {
+    "$date": "2024-10-03T12:22:01.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "02d74fb3-fd56-4c94-a73e-be7edbe48f93",
+  "expiryDate": {
+    "$date": "2024-10-03T12:22:51.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "56081882-b658-4e99-a625-5d033657270a",
+  "expiryDate": {
+    "$date": "2024-10-03T12:22:59.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "72103226-ecf9-41c7-8705-4a682356277b",
+  "expiryDate": {
+    "$date": "2024-10-03T12:29:07.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "28950469-760f-4ebc-bc98-91987ebe7f53",
+  "expiryDate": {
+    "$date": "2024-10-03T12:29:18.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "b92c6d60-11b9-4823-bcbb-cd76d34cceaf",
+  "expiryDate": {
+    "$date": "2024-10-03T12:30:45.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "4d3df8e0-ad7c-4c6c-9e47-eda430462bd3",
+  "expiryDate": {
+    "$date": "2024-10-03T12:57:57.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "3754cb41-d032-4971-9b9c-13ade19a4cc5",
+  "expiryDate": {
+    "$date": "2024-10-03T13:01:48.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "4a3b7cb4-fe9d-4680-8134-424f392a9170",
+  "expiryDate": {
+    "$date": "2024-10-03T13:02:25.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "72cdb63d-3a57-4846-a666-25caec8f3163",
+  "expiryDate": {
+    "$date": "2024-10-03T13:19:51.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "1e780df8-46e1-430d-adf3-38b52a01b4b2",
+  "expiryDate": {
+    "$date": "2024-10-03T13:23:41.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "e362842e-0fb3-4a01-8fc9-97c82250243e",
+  "expiryDate": {
+    "$date": "2024-10-03T17:56:47.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "55e71111-af1a-4815-90d2-a3d9473adf84",
+  "expiryDate": {
+    "$date": "2024-10-03T18:00:23.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "e6db8339-f6c6-4dd5-8c7d-f763e9b8e1d2",
+  "expiryDate": {
+    "$date": "2024-10-03T18:40:34.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "37ffa681-a394-4754-a774-062a92328ad0",
+  "expiryDate": {
+    "$date": "2024-10-04T05:28:56.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "2eec6782-b845-4ca0-a64a-bdde73f06cb3",
+  "expiryDate": {
+    "$date": "2024-10-04T05:36:41.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "c87b34c5-0d9a-4ff8-8247-58736a2b0c3e",
+  "expiryDate": {
+    "$date": "2024-10-04T05:37:41.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "3934acc1-a52c-419c-8005-6f1e2cadbd1f",
+  "expiryDate": {
+    "$date": "2024-10-04T05:38:09.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "09b9d7dd-3cdd-493d-b230-261653c3e78f",
+  "expiryDate": {
+    "$date": "2024-10-04T05:53:45.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "54cce11f-b461-4117-9602-a9353505bd9f",
+  "expiryDate": {
+    "$date": "2024-10-04T05:54:24.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "de85d88c-e26a-4b08-8041-0438359a8b34",
+  "expiryDate": {
+    "$date": "2024-10-04T06:04:04.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "fc0b9a36-477d-4421-940f-d32d1c3c08aa",
+  "expiryDate": {
+    "$date": "2024-10-04T06:04:39.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "934155fe-90bc-46a8-ac69-4c9600d594f3",
+  "expiryDate": {
+    "$date": "2024-10-04T06:07:05.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "d446930b-d824-416a-91f2-8464e526af8d",
+  "expiryDate": {
+    "$date": "2024-10-04T06:07:37.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "704e8b94-15f0-48f4-a436-de17cd823c26",
+  "expiryDate": {
+    "$date": "2024-10-04T06:07:57.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "8613298f-1d29-45a3-a083-2515e918b054",
+  "expiryDate": {
+    "$date": "2024-10-04T06:08:19.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "61367275-f85c-460c-94fb-272333584eb6",
+  "expiryDate": {
+    "$date": "2024-10-04T06:08:57.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "90be50f2-6ca3-40b6-95a0-2649d0809af8",
+  "expiryDate": {
+    "$date": "2024-10-04T06:09:24.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "049bed0f-ab84-494c-b0c9-164aa47d0dcd",
+  "expiryDate": {
+    "$date": "2024-10-04T06:09:45.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "aaab3442-5cb8-413e-8356-80e2cff3dc2f",
+  "expiryDate": {
+    "$date": "2024-10-04T06:10:35.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "db1ad72c-989f-4b1b-b337-430b5ec63c14",
+  "expiryDate": {
+    "$date": "2024-10-04T06:11:06.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "7f305464-59d2-4b8a-a1a2-6e2ac6c2069d",
+  "expiryDate": {
+    "$date": "2024-10-04T06:11:33.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "c38cc229-1db9-47ac-b5ca-1ceb011ef965",
+  "expiryDate": {
+    "$date": "2024-10-04T06:12:18.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "2a9fc05e-9c28-420c-9cd6-04cee4f9b75e",
+  "expiryDate": {
+    "$date": "2024-10-04T06:13:32.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "2856f79f-ef43-4cf1-8088-32b78a8457ac",
+  "expiryDate": {
+    "$date": "2024-10-04T06:45:42.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "1c13f6b0-b419-4bac-baca-0e330ac38a26",
+  "expiryDate": {
+    "$date": "2024-10-04T06:53:21.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "98c4c868-4445-467e-8400-955dd27a8e62",
+  "expiryDate": {
+    "$date": "2024-10-04T06:56:23.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "3eee6c42-ec03-46b2-9c91-fc4b4dfbd4fb",
+  "expiryDate": {
+    "$date": "2024-10-04T06:58:39.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "1c6f8a9c-bbbd-4486-b876-dcb1d137932c",
+  "expiryDate": {
+    "$date": "2024-10-04T07:00:49.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "a7e467fd-dbea-4f91-bc6c-8608b03a2b42",
+  "expiryDate": {
+    "$date": "2024-10-04T07:01:18.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "db58572c-778e-40d9-9047-bc172bb40463",
+  "expiryDate": {
+    "$date": "2024-10-04T07:08:13.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "f5ecd777-d923-4c2a-b05a-55015d1bfcfc",
+  "expiryDate": {
+    "$date": "2024-10-04T07:15:54.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "54d21367-1d85-47ce-936e-70e797e1c570",
+  "expiryDate": {
+    "$date": "2024-10-04T07:16:42.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "ed447f5a-2041-41cf-9f97-6d3c7d5e5aca",
+  "expiryDate": {
+    "$date": "2024-10-04T07:19:17.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "b97c60d2-3657-43b7-a9b5-2f9ca3b45e79",
+  "expiryDate": {
+    "$date": "2024-10-04T07:19:44.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "c118188c-de55-422d-bc4b-eaeb3f90c61a",
+  "expiryDate": {
+    "$date": "2024-10-04T07:21:03.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "310b3224-de3c-4bac-b903-6f4b66fa2389",
+  "expiryDate": {
+    "$date": "2024-10-04T07:22:48.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "40e3e6d4-b378-4f80-9451-cd3d571157d0",
+  "expiryDate": {
+    "$date": "2024-10-04T07:24:26.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "a371d7ad-9598-495b-97d7-2b8de272ce03",
+  "expiryDate": {
+    "$date": "2024-10-04T07:24:46.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "024daa94-7138-4ac1-92fc-921e5886b3db",
+  "expiryDate": {
+    "$date": "2024-10-04T07:26:32.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "cd21a295-ad2e-41b9-b805-db36143b37ee",
+  "expiryDate": {
+    "$date": "2024-10-04T08:56:23.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "681bed1f-7a6e-4e22-85b5-af66d0e1f049",
+  "expiryDate": {
+    "$date": "2024-10-04T08:57:14.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "bc024a42-0518-4f4c-8463-5edd484cf5be",
+  "expiryDate": {
+    "$date": "2024-10-04T08:57:38.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "3f8c6809-a689-4f88-a888-48c4333a89d2",
+  "expiryDate": {
+    "$date": "2024-10-04T08:58:50.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "b2804fe0-e11c-4757-804d-4dd99ddcff03",
+  "expiryDate": {
+    "$date": "2024-10-04T08:59:36.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "e40cbac3-2aa3-4b3f-81d3-85643153927c",
+  "expiryDate": {
+    "$date": "2024-10-04T09:00:06.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "890177d5-7b05-4bbf-92c5-2c1253c524a3",
+  "expiryDate": {
+    "$date": "2024-10-04T09:00:44.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "c6a2c7c0-fd36-46ae-8b5a-f6ea8c77d477",
+  "expiryDate": {
+    "$date": "2024-10-04T09:01:39.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "2425f3a4-957d-4ae5-a550-919b859426ac",
+  "expiryDate": {
+    "$date": "2024-10-04T09:02:01.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "96811c5e-f301-4f97-86d5-2081dd59da0d",
+  "expiryDate": {
+    "$date": "2024-10-04T09:02:32.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "5efb72ba-e7b1-4656-a079-43a1c1e800a8",
+  "expiryDate": {
+    "$date": "2024-10-04T09:02:53.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "c5d21297-f78b-416b-8cf2-4903079cd3b3",
+  "expiryDate": {
+    "$date": "2024-10-04T09:06:34.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "d6d5d0c0-c654-4f87-8835-8b3997462b30",
+  "expiryDate": {
+    "$date": "2024-10-04T09:07:02.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "3fda7015-214a-4259-9e84-0d0fbb799b8e",
+  "expiryDate": {
+    "$date": "2024-10-04T09:13:10.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "37019925-df23-4e8d-87d9-bf0840d00027",
+  "expiryDate": {
+    "$date": "2024-10-04T09:23:36.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "22ef72d3-7127-45dc-81cc-3375009d6c42",
+  "expiryDate": {
+    "$date": "2024-10-04T09:32:30.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "83424d8f-e74a-4fe1-a4b8-ecc4edf833a8",
+  "expiryDate": {
+    "$date": "2024-10-04T09:36:06.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "381324d1-34bd-455f-9812-124426128afd",
+  "expiryDate": {
+    "$date": "2024-10-04T09:36:57.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "e5ffb3ae-b4fa-448c-a48d-b01b602abaa8",
+  "expiryDate": {
+    "$date": "2024-10-04T09:38:39.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "25fa5c47-9ed1-4026-8739-8298c086f153",
+  "expiryDate": {
+    "$date": "2024-10-04T09:42:12.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "3a95c1df-8497-402b-bae7-cc38994eedde",
+  "expiryDate": {
+    "$date": "2024-10-04T09:42:41.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "9467f762-c2f8-44b5-87c0-4b6fc808f37c",
+  "expiryDate": {
+    "$date": "2024-10-04T09:44:22.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "2529e66f-f2b1-40f8-807b-d2d2286014cf",
+  "expiryDate": {
+    "$date": "2024-10-04T09:46:16.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "33e947c9-279a-4d05-ab49-fb16b01e370d",
+  "expiryDate": {
+    "$date": "2024-10-04T09:49:38.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "1a87a9f7-aec8-43cc-8997-3a1e845cba82",
+  "expiryDate": {
+    "$date": "2024-10-04T10:00:55.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "a608f7a6-3eb3-4a05-b844-cb17580c08ff",
+  "expiryDate": {
+    "$date": "2024-10-04T10:04:45.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "3e821363-be5e-4069-befc-d4129e2d9d24",
+  "expiryDate": {
+    "$date": "2024-10-04T10:07:08.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "50e8108f-3b15-45fd-be8b-ef9896466fd1",
+  "expiryDate": {
+    "$date": "2024-10-04T10:12:33.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "fc114f13-b40b-482e-94e4-643dea57f8ca",
+  "expiryDate": {
+    "$date": "2024-10-04T10:27:38.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "fa1eba35-03ac-4504-96b2-22547a6dbd49",
+  "expiryDate": {
+    "$date": "2024-10-04T10:33:19.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "122c31a3-d2a4-43f4-8778-db2f4a41bef5",
+  "expiryDate": {
+    "$date": "2024-10-04T10:35:22.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "df333fb3-941a-4c23-8109-8bbf57325d41",
+  "expiryDate": {
+    "$date": "2024-10-04T11:35:08.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "e1a36526-ffde-4a60-b130-277f4447fe1c",
+  "expiryDate": {
+    "$date": "2024-10-04T12:19:16.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "0fd746e1-51cb-4e5c-8740-07801b49b159",
+  "expiryDate": {
+    "$date": "2024-10-04T12:39:10.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "a90e63a1-f860-464c-987d-595c7ef6f43f",
+  "expiryDate": {
+    "$date": "2024-10-04T12:42:29.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "34cb6d75-bf42-4627-99db-8132ac239b73",
+  "expiryDate": {
+    "$date": "2024-10-04T12:48:16.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "5ad6d896-7814-4d23-b46d-60e0f020b9c4",
+  "expiryDate": {
+    "$date": "2024-10-04T12:49:01.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "d700d95b-8ef8-485d-91fe-a000000c9a34",
+  "expiryDate": {
+    "$date": "2024-10-04T12:50:02.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "b085e909-e5b7-481e-ab9e-54813e9c54f0",
+  "expiryDate": {
+    "$date": "2024-10-04T12:50:25.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "eea0f995-c12b-40d7-b7e6-c165b6f86e9f",
+  "expiryDate": {
+    "$date": "2024-10-04T12:51:01.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "45c707ec-e041-489e-956a-c4f4d3a977a5",
+  "expiryDate": {
+    "$date": "2024-10-04T12:52:09.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "01ee2227-5cf9-4e50-9c02-da2934aadaae",
+  "expiryDate": {
+    "$date": "2024-10-04T12:55:41.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "284d90db-fb2d-4d42-8077-27bf6f1fb0a6",
+  "expiryDate": {
+    "$date": "2024-10-04T12:57:34.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+},
+{
+  "_id": "ba6942ac-b8c1-4311-ac63-351327902d6a",
+  "expiryDate": {
+    "$date": "2024-10-04T12:59:13.000Z"
+  },
+  "_class": "org.example.backend.entity.InvalidatedToken"
+}]

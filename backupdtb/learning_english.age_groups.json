@@ -1,0 +1,60 @@
+[{
+  "_id": "6237bcca-c17f-41aa-8ec7-61b522bfef47",
+  "name": "3 years old",
+  "image": "../age-images/age3.png",
+  "_class": "org.example.backend.entity.AgeGroup"
+},
+{
+  "_id": "4e42da56-629a-4ef1-b593-5a5550209365",
+  "name": "4 years old",
+  "image": "../age-images/age4.png",
+  "_class": "org.example.backend.entity.AgeGroup"
+},
+{
+  "_id": "7dce5407-c6ff-4a24-886d-73d3fc06b8d0",
+  "name": "5 years old",
+  "image": "../age-images/age5.png",
+  "_class": "org.example.backend.entity.AgeGroup"
+},
+{
+  "_id": "b13aa2a6-22c6-4529-a475-6e7f1eed116d",
+  "name": "6 years old",
+  "image": "../age-images/age6.png",
+  "_class": "org.example.backend.entity.AgeGroup"
+},
+{
+  "_id": "fdc22d8d-5324-4e67-8a10-d29680c97749",
+  "name": "7 years old",
+  "image": "../age-images/age7.png",
+  "_class": "org.example.backend.entity.AgeGroup"
+},
+{
+  "_id": "ab83303d-4d59-444d-b878-538f05dbd04b",
+  "name": "8 years old",
+  "image": "../age-images/age8.png",
+  "_class": "org.example.backend.entity.AgeGroup"
+},
+{
+  "_id": "f197c86b-76be-4688-8685-75e75e76a857",
+  "name": "9 years old",
+  "image": "../age-images/age9.png",
+  "_class": "org.example.backend.entity.AgeGroup"
+},
+{
+  "_id": "5a7e263f-0cdd-4fc4-a037-38fe28b44e4f",
+  "name": "10 years old",
+  "image": "../age-images/age10.png",
+  "_class": "org.example.backend.entity.AgeGroup"
+},
+{
+  "_id": "d5ec43ae-148a-4501-a2ea-29766a5ce449",
+  "name": "11 years old",
+  "image": "../age-images/age11.png",
+  "_class": "org.example.backend.entity.AgeGroup"
+},
+{
+  "_id": "ef6f2795-b4b7-493d-9c0f-ac1b417d494b",
+  "name": "12 years old",
+  "image": "../age-images/age12.png",
+  "_class": "org.example.backend.entity.AgeGroup"
+}]

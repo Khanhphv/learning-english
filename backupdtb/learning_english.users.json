@@ -1,0 +1,7 @@
+[{
+  "_id": "62d66ea3-7288-4269-8518-034b0bbd18f7",
+  "username": "Student123",
+  "password": "$2a$10$u5xu2Vym9SHhLmGaz1c4BOwlYLDZU2OCwZwebr7Oyx7AoD9KNhAMO",
+  "role": "STUDENT",
+  "_class": "org.example.backend.entity.User"
+}]
