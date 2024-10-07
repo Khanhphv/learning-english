@@ -1,25 +1,29 @@
 package org.example.backend.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.backend.entity.Option;
-import org.example.backend.entity.QuestionType;
-import org.example.backend.entity.QuizQuestion;
-import org.example.backend.entity.Vocabulary;
+import org.example.backend.entity.*;
 import org.example.backend.exception.ErrorCode;
-import org.example.backend.repository.VocabularyRepository;
+import org.example.backend.repository.*;
 import org.example.backend.exception.ApplicationException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
 public class QuizServiceImp implements QuizService{
 
+    private static final Logger log = LoggerFactory.getLogger(QuizServiceImp.class);
     private final VocabularyRepository vocabularyRepository;
+    private final QuizRepository quizRepository;
+    private final ResultRepository resultRepository;
+    private final UserVocabularyRepository userVocabularyRepository;
+    private final QuizQuestionRepository quizQuestionRepository;
 
     @Override
     public List<QuizQuestion> generateQuizQuestions(String topicId, int numberOfQuestions) {
@@ -47,6 +51,57 @@ public class QuizServiceImp implements QuizService{
         return quizQuestions;
     }
 
+    @Override
+    @Transactional
+    public void submitQuiz(List<QuizQuestion> quizQuestions) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = (User) authentication.getPrincipal();
+
+
+        Quiz quiz = Quiz.builder()
+                .quizType(QuizType.RANDOM)
+                .completed(true)
+                .questionIds(quizQuestions.stream().map(QuizQuestion::getId).toList())
+                .userId(user.getId())
+                .build();
+
+        quizRepository.save(quiz);
+        quizQuestionRepository.saveAll(quizQuestions);
+        for (QuizQuestion quizQuestion: quizQuestions){
+            log.info("Quiz question: {}", quizQuestion);
+        }
+        Result result = Result.builder()
+                .quizId(quiz.getId())
+                .correctAnswersCount(quizQuestions.stream().filter(QuizQuestion::isCorrect).toList().size())
+                .numberOfQuestions(quizQuestions.size())
+                .isCompleted(true)
+                .build();
+
+        resultRepository.save(result);
+        updateUserVocabularyProgress(user.getId(), quizQuestions);
+
+    }
+
+
+    private void updateUserVocabularyProgress(String userId, List<QuizQuestion> quizQuestions){
+        for (QuizQuestion quizQuestion: quizQuestions){
+            UserVocabulary userVocabulary = userVocabularyRepository.findByUserIdAndVocabularyId(userId, quizQuestion.getVocabulary().getId())
+                    .orElseGet(() -> UserVocabulary.builder()
+                            .userId(userId)
+                            .vocabularyId(quizQuestion.getVocabulary().getId())
+                            .correctAnswersCount(0)
+                            .learned(false)
+                            .build());
+
+            if (quizQuestion.isCorrect()){
+                userVocabulary.setCorrectAnswersCount(userVocabulary.getCorrectAnswersCount() + 1);
+            }
+            if (userVocabulary.getCorrectAnswersCount() >= 3){
+                userVocabulary.setLearned(true);
+            }
+            userVocabularyRepository.save(userVocabulary);
+        }
+    }
 
 
     private List<Option> generateOptions(List<Vocabulary> vocabularies, Vocabulary vocabulary, QuestionType questionType){

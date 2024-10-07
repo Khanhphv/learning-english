@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface QuizService {
     List<QuizQuestion> generateQuizQuestions(String topicId, int numberOfQuestions);
-
+    void submitQuiz(List<QuizQuestion> quizQuestions);
 
 }

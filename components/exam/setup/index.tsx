@@ -28,6 +28,7 @@ const SetupExam = ({ handleSubmit, handleClose }: { handleSubmit: (numberOfQuest
                 value={questions}
                 onChange={(e) => setQuestions(Number(e.target.value))}
                 min={1}
+                max={100}
               />
             </div>
             <Button onClick={() => handleSubmit(questions)} className="w-full">Start test</Button>

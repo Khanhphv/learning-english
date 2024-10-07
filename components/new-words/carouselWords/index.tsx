@@ -11,14 +11,25 @@ import {
 import { Vocabulary } from "@/pages/listening/[...index]";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./_.module.scss";
+import { LearnVocabularyResponse } from "@/pages/vocabulary/[...slug]";
+import { store } from "@/stores";
+import { useSelector } from "react-redux";
+import { RootState } from "@/stores";
+import { CircleCheckBig, PenLine } from "lucide-react";
 
-const CarouselWords = ({ vocabularies, findExample }: { vocabularies: Vocabulary[], findExample: (word: string) => void }) => {
+const CarouselWords = ({
+  vocabularies,
+  findExample,
+}: {
+  vocabularies: LearnVocabularyResponse[];
+  findExample: (word: string) => void;
+}) => {
   const [api, setApi] = useState<CarouselApi>();
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [count, setCount] = useState<number>(0);
   const [flipState, setFlipState] = useState<{ [key: number]: boolean }>({});
   const selectedSnap = useRef<number>(0);
-
+  const { isAuthenticated } = useSelector((state: RootState) => state.auth);
 
   useEffect(() => {
     if (!api) {
@@ -27,18 +38,16 @@ const CarouselWords = ({ vocabularies, findExample }: { vocabularies: Vocabulary
 
     setCount(api.scrollSnapList().length);
     const onSelect = () => {
-        selectedSnap.current = api.selectedScrollSnap();
+      selectedSnap.current = api.selectedScrollSnap();
 
       setCurrentSlide(selectedSnap.current);
-    
+
       setFlipState((prevState) => ({
         ...prevState,
         [selectedSnap.current]: false,
       }));
 
-
-      if(vocabularies[selectedSnap.current]?.englishWord) {
-        
+      if (vocabularies[selectedSnap.current]?.englishWord) {
         findExample(vocabularies[selectedSnap.current].englishWord);
       }
     };
@@ -59,7 +68,9 @@ const CarouselWords = ({ vocabularies, findExample }: { vocabularies: Vocabulary
 
   return (
     <div className={styles.container}>
-      <div className="text-center text-xl font-semibold p-5">Ấn vào thẻ để xem nghĩa Tiếng Việt</div>
+      <div className="text-center text-xl font-semibold p-5">
+        Ấn vào thẻ để xem nghĩa Tiếng Việt
+      </div>
       <Carousel setApi={setApi} className="w-full max-w-md mx-auto space-y-4">
         <CarouselContent>
           {vocabularies.map((vocabulary, index) => (
@@ -79,6 +90,14 @@ const CarouselWords = ({ vocabularies, findExample }: { vocabularies: Vocabulary
                         className="w-full h-full  border-2 bg-gradient-to-tr from-teal-100 bg-white text-black cursor-pointer"
                         onClick={() => handleFlip(index)}
                       >
+                        {isAuthenticated ? (
+                          vocabulary.learned ? (
+                            <div className="flex gap-1 w-fit m-2 text-green-300"><CircleCheckBig /> memorized</div>
+                          ) : (
+                            <div className="flex gap-1 w-fit m-2 text-orange-300"><PenLine /> Learning</div>
+                          )
+                        ) : null}
+
                         <CardContent className="flex items-center justify-center h-full">
                           <span className="text-3xl font-bold">
                             {vocabulary.englishWord}

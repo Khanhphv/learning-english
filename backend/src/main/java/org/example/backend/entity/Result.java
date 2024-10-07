@@ -21,9 +21,8 @@ public class Result {
     @MongoId
     @Builder.Default
     String id = UUID.randomUUID().toString();
-
     String quizId;
-    List<String> userAnswers;
-    int score;
+    int correctAnswersCount;
+    int numberOfQuestions;
     boolean isCompleted;
 }

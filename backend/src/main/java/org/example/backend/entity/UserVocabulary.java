@@ -24,5 +24,5 @@ public class UserVocabulary {
     String userId;
     String vocabularyId;
     int correctAnswersCount;
-    boolean isLearned;
+    boolean learned;
 }

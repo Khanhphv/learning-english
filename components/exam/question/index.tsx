@@ -2,6 +2,7 @@ import { Question, QuestionType } from "@/pages/exam/[index]";
 import {
   TextToSpeechFetcher,
   TextToSpeechRequest,
+  useTextToSpeech,
 } from "api-client/textToSpeech";
 import { Mic, Volume2, Square } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
@@ -12,7 +13,6 @@ import {
   SpeechToTextRequest,
 } from "api-client/speechToText";
 import { set } from "react-hook-form";
-
 
 interface QuestionProps {
   index: number;
@@ -48,17 +48,6 @@ const QuestionComponent = ({
 
   const [audioUrl, setAudioUrl] = useState<string>("");
   const [transcriptResult, setTranscriptResult] = useState<string | null>(null);
-
-  const handleListen = async () => {
-    try {
-      const data = await TextToSpeechFetcher("/text:synthesize", params);
-      if (data) {
-        setAudioUrl(`data:audio/mp3;base64,${data.audioContent}`);
-      }
-    } catch (error) {
-      console.error("Error fetching audio:", error);
-    }
-  };
 
   
 
@@ -124,12 +113,22 @@ const QuestionComponent = ({
     };
   };
 
-  useEffect(() => {
-    if (audioUrl) {
-      const newAudio = new Audio(audioUrl);
-      newAudio.play();
+  const { audioContent, isLoading, error } = useTextToSpeech(params);
+
+ 
+  const handleListen = async () => {
+    if (audioContent) {
+      const newAudioUrl = `data:audio/mp3;base64,${audioContent}`;
+      // setAudioUrl(newAudioUrl);
+      const audio = new Audio(newAudioUrl);
+      audio.play();
     }
-  }, [audioUrl]);
+  };
+
+
+  if (error) {
+    toast.error("Error fetching audio");
+  }
 
   return (
     <div
@@ -240,6 +239,7 @@ const QuestionComponent = ({
           )}
         </div>
       )}
+
       <div className="flex flex-wrap gap-3 justify-center">
         {question &&
           question.questionType !== QuestionType.SPEAK &&
@@ -255,13 +255,13 @@ const QuestionComponent = ({
             >
               <div
                 aria-selected={option.vocabularyId === question.userAnswerId}
-                className={`w-full h-full p-10  border-2 rounded-xl flex justify-center items-center ${
+                className={`w-full h-full sm:p-10 p-2  border-2 rounded-xl flex justify-center items-center ${
                   submitAnswer
-                    ? option.correct 
+                    ? option.correct
                       ? "cursor-default bg-green-200 border-green-500 text-black"
-                      : option.vocabularyId === question.userAnswerId 
-                        ? "cursor-default bg-red-200 border-red-500 text-black"
-                        : "cursor-default bg-violet-50  text-black opacity-50"
+                      : option.vocabularyId === question.userAnswerId
+                      ? "cursor-default bg-red-200 border-red-500 text-black"
+                      : "cursor-default bg-violet-50  text-black opacity-50"
                     : "hover:cursor-pointer bg-violet-50 hover:border-violet-500 aria-selected:bg-indigo-200 aria-selected:border-indigo-500"
                 }`}
               >

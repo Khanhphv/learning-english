@@ -10,6 +10,14 @@ import { TopicResponse } from "@/pages/group-age/[slug]";
 import { Vocabulary } from "@/pages/listening/[...index]";
 import { Button } from "@/components/ui/button";
 import { BookCheck } from "lucide-react";
+
+export type LearnVocabularyResponse = {
+  id: string;
+  englishWord: string;
+  vietnameseMeaning: string;
+  learned: boolean;
+};
+
 const Vocabolary = () => {
   const router = useRouter();
   const { slug } = router.query;
@@ -18,7 +26,9 @@ const Vocabolary = () => {
   const [example, setExample] = useState<string | null>(null);
   const [topics, setTopics] = useState<TopicResponse[]>([]);
   const [ageGroup, setAgeGroup] = useState<any>(null);
-  const [vocabularies, setVocabularies] = useState<Vocabulary[]>([]);
+  const [vocabularies, setVocabularies] = useState<LearnVocabularyResponse[]>(
+    []
+  );
 
   const { data: topics_data, error: topics_error } = useSWR(
     ageId ? `/topic/${ageId}` : null,
@@ -38,8 +48,8 @@ const Vocabolary = () => {
 
   const { data: vocabularies_data, error: vocabularies_error } = useSWR(
     topicId
-      ? `/vocabulary/get-by-topic/${topicId}`
-      : `/vocabulary/get-by-topic/${topics[0]?.id}`,
+      ? `/vocabulary/get-by-topic-and-leaning-status/${topicId}`
+      : `/vocabulary/get-by-topic-and-leaning-status/${topics[0]?.id}`,
     {
       revalidateOnMount: true,
       revalidateOnFocus: false,
@@ -69,6 +79,7 @@ const Vocabolary = () => {
       if (vocabularies_data.result.length > 0) {
         setExample(vocabularies_data.result[0].englishWord);
       }
+      console.log(vocabularies_data.result);
     }
 
     if (topics_error) {
@@ -86,7 +97,15 @@ const Vocabolary = () => {
     if (dialogue_error) {
       toast.error(dialogue_error.message);
     }
-  }, [topics_data, age_group_data, vocabularies_data, dialogue_error, vocabularies_error, topics_error, age_group_error]);
+  }, [
+    topics_data,
+    age_group_data,
+    vocabularies_data,
+    dialogue_error,
+    vocabularies_error,
+    topics_error,
+    age_group_error,
+  ]);
 
   const handleClick = (topicId: string) => {
     router.push(`/vocabulary/${ageId}/${topicId}`);
@@ -98,8 +117,7 @@ const Vocabolary = () => {
 
   const handleButtonTest = (topic: string) => {
     router.push(`/exam/${topic ? topic : topics[0]?.id}`);
-  }
-
+  };
 
   return (
     <div className={styles.container}>
@@ -114,19 +132,33 @@ const Vocabolary = () => {
             handleClick={handleClick}
           />
         </div>
-        <div className="col-span-1">
-          <CarouselWords
-            vocabularies={vocabularies}
-            findExample={findExample}
-          />
+        <div className="col-span-1 flex justify-end items-center">
+          <div className="xl:w-[80%]">
+            <CarouselWords
+              vocabularies={vocabularies}
+              findExample={findExample}
+            />
+          </div>
         </div>
         <div className="lg:col-span-1 sm:col-span-2 justify-center mb-10">
           <div className="shadow-lg bg-gradient-to-tr from-amber-200 shadow-gray-200 p-10 rounded-lg">
             <div>Example(Ví dụ):</div>
-            <div>{dialogue_data?.result?.englishSentence ? dialogue_data?.result?.englishSentence : example}</div>
+            <div>
+              {dialogue_data?.result?.englishSentence
+                ? dialogue_data?.result?.englishSentence
+                : example}
+            </div>
           </div>
           <div className="text-center mt-5">
-            <Button onClick={() => handleButtonTest(topicId)} className="hover:bg-red-500 bg-red-400" variant={"outline"}> <BookCheck />Kiểm tra tại đây!</Button>
+            <Button
+              onClick={() => handleButtonTest(topicId)}
+              className="hover:bg-red-500 bg-red-400"
+              variant={"outline"}
+            >
+              {" "}
+              <BookCheck />
+              Kiểm tra tại đây!
+            </Button>
           </div>
         </div>
       </div>

@@ -41,8 +41,8 @@ export type Question = {
   vocabulary: Vocabulary;
   options: Option[];
   userAnswerId: string;
-  isCorrect: boolean;
-  isAnswered: boolean;
+  correct: boolean;
+  answered: boolean;
   questionType: QuestionType;
 };
 
@@ -60,8 +60,7 @@ const ExamView = () => {
 
   const [isOpenResult, setIsOpenResult] = useState<boolean>(false);
   const [submitAnswer, setSubmitAnswer] = useState<boolean>(false);
-  const [numberOfCorrectAnswers, setNumberOfCorrectAnswers] =
-    useState<number>(0);
+ 
 
   const handleShowResult = () => {
     setIsOpenResult(!isOpenResult);
@@ -94,6 +93,7 @@ const ExamView = () => {
       setQuestions(response.result);
       console.log(response.result);
     } catch (error) {
+      toast.error("Error generating quiz:");
       console.error("Error generating quiz:");
     }
   };
@@ -102,7 +102,7 @@ const ExamView = () => {
     setQuestions((prevQuestions = []) =>
       prevQuestions.map((question) => {
         if (question.id === questionId) {
-          if (!question.isAnswered)
+          if (!question.answered)
             setNumberOfQuestionsAnswered(numberOfQuestionsAnswered + 1);
 
           if (question.userAnswerId === vocabularyId) {
@@ -110,14 +110,14 @@ const ExamView = () => {
             return {
               ...question,
               userAnswerId: "",
-              isAnswered: false,
+              answered: false,
             };
           }
 
           return {
             ...question,
             userAnswerId: vocabularyId,
-            isAnswered: true,
+            answered: true,
           };
         }
         return question;
@@ -132,28 +132,27 @@ const ExamView = () => {
       setQuestions((prevQuestions = []) => {
         const updatedQuestions = prevQuestions.map((question) => {
           if (
-            question.isAnswered === true &&
+            question.answered === true &&
             question.userAnswerId === question.vocabulary.id
           ) {
-            setNumberOfCorrectAnswers(numberOfCorrectAnswers + 1);
+            
             return {
               ...question,
-              isCorrect: true,
+              correct: true,
             };
           }
           return question;
         });
-
+        QuizApi.submitQuizzes(updatedQuestions);
         return updatedQuestions;
       });
+      window.scrollTo(0, 0);
     } catch (error) {
+      toast.error("Error submitting exam");
       console.log(error);
     }
   };
-  
 
-
-  
   return (
     <div className="flex ">
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-2 bg-white border-b">
@@ -234,12 +233,11 @@ const ExamView = () => {
             <div className="my-5 grid grid-cols-2 grid-rows-2 gap-x-8 font-medium text-xl gap-y-2">
               <span className="col-span-1 text-[#59E8B5]">Correct</span>
               <span className="col-span-1 text-[#59E8B5] bg-green-200 rounded-xl py-0.5 text-center">
-                {" "}
-                {numberOfCorrectAnswers}
+                {questions?.filter((question) => question.correct).length || 0}
               </span>
               <span className="col-span-1 text-[#FF983A]">Wrong</span>
               <span className="col-span-1 text-[#FF983A] bg-orange-200 rounded-xl py-0.5 text-center">
-                {numberOfQuestions - numberOfCorrectAnswers}
+                {questions?.filter((question) => !question.correct).length || 0}
               </span>
             </div>
           </div>

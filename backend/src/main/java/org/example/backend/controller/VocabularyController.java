@@ -3,6 +3,7 @@ package org.example.backend.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.example.backend.dto.ApiResponse;
+import org.example.backend.dto.response.LearnVocabularyResponse;
 import org.example.backend.dto.response.VocabularyResponse;
 import org.example.backend.service.VocabularyService;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class VocabularyController {
     @PostMapping("/add")
     public ApiResponse<Object> importVocabularyFromExcel(@RequestParam("file") MultipartFile  file){
         try {
-            vocabularyService.addManyVocaubularyFromExcel(file);
+            vocabularyService.addManyVocabularyFromExcel(file);
         }catch (Exception e){
             log.info(e.getMessage());
         }
@@ -40,6 +41,13 @@ public class VocabularyController {
     public ApiResponse<List<VocabularyResponse>> findAllVocabularyByTopicId(@PathVariable("topic-id") String topicId){
         return ApiResponse.<List<VocabularyResponse>>builder()
                 .result(vocabularyService.findAllVocabularyByTopicId(topicId))
+                .build();
+    }
+
+    @GetMapping("/get-by-topic-and-leaning-status/{topic-id}")
+    public ApiResponse<List<LearnVocabularyResponse>> findAllVocabularyByTopicIdAndLearningStatus(@PathVariable("topic-id") String topicId){
+        return ApiResponse.<List<LearnVocabularyResponse>>builder()
+                .result(vocabularyService.findAllVocabularyByTopicIdAndLearningStatus(topicId))
                 .build();
     }
 }

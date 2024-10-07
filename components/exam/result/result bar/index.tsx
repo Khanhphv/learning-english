@@ -26,7 +26,7 @@ const ResultBar = ({
         {questions &&
           questions.map((question, index) => (
             <li key={index} className="flex items-center space-x-2">
-              {question.isCorrect  ? (
+              {question.correct  ? (
                 <CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0" />
               ) : (
                 <XCircle className="h-4 w-4 text-red-500 flex-shrink-0" />

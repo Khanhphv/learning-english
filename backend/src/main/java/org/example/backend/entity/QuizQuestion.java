@@ -26,8 +26,8 @@ public class QuizQuestion {
     Vocabulary vocabulary;
     List<Option> options;
     String userAnswerId;
-    boolean isCorrect;
-    boolean isAnswered;
+    boolean correct;
+    boolean answered;
     QuestionType questionType;
 
 }

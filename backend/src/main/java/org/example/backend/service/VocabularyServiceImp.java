@@ -4,13 +4,15 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.example.backend.dto.response.LearnVocabularyResponse;
 import org.example.backend.dto.response.VocabularyResponse;
-import org.example.backend.entity.AgeGroup;
-import org.example.backend.entity.Topic;
-import org.example.backend.entity.Vocabulary;
+import org.example.backend.entity.*;
 import org.example.backend.mapper.VocabularyMapper;
 import org.example.backend.repository.TopicRepository;
+import org.example.backend.repository.UserVocabularyRepository;
 import org.example.backend.repository.VocabularyRepository;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -26,12 +28,12 @@ import static org.example.backend.utils.ExcelUtil.isRowEmpty;
 @Slf4j
 public class VocabularyServiceImp implements VocabularyService{
     private final VocabularyMapper vocabularyMapper;
-
+    private final UserVocabularyRepository userVocabularyRepository;
     private final VocabularyRepository vocabularyRepository;
     private final TopicRepository topicRepository;
 
     @Override
-    public void addManyVocaubularyFromExcel(MultipartFile file) throws IOException {
+    public void addManyVocabularyFromExcel(MultipartFile file) throws IOException {
         Workbook workbook = new XSSFWorkbook(file.getInputStream());
         Sheet sheet = workbook.getSheet("Table vocabulary");
         Iterator<Row> rows = sheet.iterator();
@@ -76,5 +78,27 @@ public class VocabularyServiceImp implements VocabularyService{
         List<Vocabulary> vocabularies = vocabularyRepository.findAllByTopicId(topicId);
 
         return vocabularies.stream().map(vocabularyMapper::toVocabularyResponse).toList();
+    }
+
+    @Override
+    public List<LearnVocabularyResponse> findAllVocabularyByTopicIdAndLearningStatus(String topicId) {
+        List<LearnVocabularyResponse> learnVocabularyResponses = vocabularyRepository.findAllByTopicId(topicId).stream()
+                .map(vocabularyMapper::toLearnVocabularyResponse)
+                .toList();
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication == null) {
+            return learnVocabularyResponses;
+        }else if (authentication.getPrincipal() instanceof User user){
+            learnVocabularyResponses.forEach(learnVocabularyResponse -> {
+                UserVocabulary userVocabulary = userVocabularyRepository.findByUserIdAndVocabularyId(user.getId(), learnVocabularyResponse.getId()).orElse(null);
+                if (userVocabulary != null){
+                    learnVocabularyResponse.setLearned(userVocabulary.isLearned());
+                }else {
+                    learnVocabularyResponse.setLearned(false);
+                }
+            });
+        }
+
+        return learnVocabularyResponses;
     }
 }

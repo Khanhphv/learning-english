@@ -4,10 +4,9 @@ import lombok.RequiredArgsConstructor;
 import org.example.backend.dto.ApiResponse;
 import org.example.backend.entity.QuizQuestion;
 import org.example.backend.service.QuizService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,6 +14,7 @@ import java.util.List;
 @RequestMapping("/api/v1/quizzes")
 @RequiredArgsConstructor
 public class QuizController {
+    private static final Logger log = LoggerFactory.getLogger(QuizController.class);
     private final QuizService quizService;
 
     @GetMapping("/random")
@@ -25,4 +25,19 @@ public class QuizController {
                 .build();
     }
 
+
+
+    @PostMapping("/submit")
+    public ApiResponse<Object> submitQuiz(@RequestBody List<QuizQuestion> quizQuestions){
+        try{
+            quizService.submitQuiz(quizQuestions);
+        }catch (Exception e){
+            log.info("Error occurred while submitting quiz", e);
+        }
+
+
+        return ApiResponse.builder()
+                .message("Quiz submitted successfully")
+                .build();
+    }
 }
